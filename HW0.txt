@@ -1,0 +1,7 @@
+1. Intended platform for final project (e.g. Android, iOS)
+
+2. Intended framework/programming language for your final project (e.g. Kotlin, Swift)
+
+3. Whether you want to explore cross-platform development
+
+4. Include a brief explanation for your selections
