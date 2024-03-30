@@ -1,7 +1,17 @@
 1. Intended platform for final project (e.g. Android, iOS)
 
+  Apple - iOS
+
 2. Intended framework/programming language for your final project (e.g. Kotlin, Swift)
+
+  Swift
 
 3. Whether you want to explore cross-platform development
 
+  No, I want to focus on iOS platform development for now as I am a beginner. 
+
 4. Include a brief explanation for your selections
+
+  1. iOS: I decided to stick to iOS development as it's the platform and environment that I am most familiar with as I have had an apple device ever since I could remember (iPod, iPhone, Macbook, iPad, AirPods, Apple Watch, etc.).
+  2. Swift: I've never used swift before but after doing some research I found that swift would be the most appropriate for developing apps for iOS since it's created by apple for the purpose of this.
+  3. Cross-platform: It would be cool to be able to develop an app available on multiple platforms but I want to focus on iOS development for now as I've never built a mobile application before.
