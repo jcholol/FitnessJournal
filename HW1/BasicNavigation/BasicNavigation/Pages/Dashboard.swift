@@ -10,11 +10,11 @@ import SwiftUI
 struct Dashboard: View {
     var body: some View {
         ZStack {
-            Circle()
-                .frame(width: 400, height: 400)
+            Rectangle()
                 .foregroundColor(/*@START_MENU_TOKEN@*/ .blue/*@END_MENU_TOKEN@*/)
             Text("Dashboard")
-                .foregroundColor(.white)
+                .foregroundStyle(.white.gradient)
+                .fontDesign(.rounded)
                 .font(.system(size: 70, weight: .bold))
         }
     }

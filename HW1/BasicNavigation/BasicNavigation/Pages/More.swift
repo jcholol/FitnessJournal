@@ -10,12 +10,13 @@ import SwiftUI
 struct More: View {
     var body: some View {
         ZStack {
-            Circle()
-                .frame(width: 400, height: 400)
-                .foregroundColor(.gray)
-            Text("More")
-                .foregroundColor(.white)
-                .font(.system(size: 70, weight: .bold))
+            Ellipse()
+                .fill(.gray)
+                .frame(width: 400, height: 100)
+            Text("More Page")
+                .foregroundStyle(.white.gradient)
+                .fontDesign(.serif)
+                .font(.system(size: 65, weight: .bold))
         }
     }
 }
