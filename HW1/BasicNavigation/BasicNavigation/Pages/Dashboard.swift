@@ -12,7 +12,6 @@ struct Dashboard: View {
         ZStack {
             Rectangle()
                 .foregroundColor(.blue)
-                .frame(width: .infinity, height: .infinity - 100)
             Text("Dashboard")
                 .foregroundStyle(.white.gradient)
                 .fontDesign(.rounded)

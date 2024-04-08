@@ -20,9 +20,10 @@ struct ContentView: View {
                     Button(action: {
                         isPresenting = true
                     }) {
+                        // need to fix this to be a tool bar at the top
                         Image(systemName: "person.crop.circle.fill")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 30, height: 30)
                             .offset(y: -10)
                     }
                 }
