@@ -20,14 +20,16 @@ struct ContentView: View {
                     Button(action: {
                         isPresenting = true
                     }) {
-                        Label("Profile", systemImage: "person.crop.circle.fill")
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .offset(y: -10)
                     }
-                    .frame(width: 500, height: 500)
                 }
             }
             .sheet(isPresented: $isPresenting) {
                 NavigationStack {
-                    Text("Profiles Page")
+                    Profiles()
                         .toolbar {
                             ToolbarItem {
                                 Button(action: {
@@ -40,6 +42,7 @@ struct ContentView: View {
                 }
             }
         }
+        .foregroundColor(.black)
     }
 }
 

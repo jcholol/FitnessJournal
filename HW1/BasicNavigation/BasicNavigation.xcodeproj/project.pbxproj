@@ -15,6 +15,8 @@
 		CDEBFBB82BC35F6500526999 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBFBB72BC35F6500526999 /* Plans.swift */; };
 		CDEBFBBA2BC35F7700526999 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBFBB92BC35F7700526999 /* Dashboard.swift */; };
 		CDEBFBBC2BC35FA500526999 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBFBBB2BC35FA500526999 /* More.swift */; };
+		CDEBFBBF2BC3679B00526999 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBFBBE2BC3679B00526999 /* Profiles.swift */; };
+		CDEBFBC12BC36BE200526999 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBFBC02BC36BE200526999 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CDEBFBB72BC35F6500526999 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		CDEBFBB92BC35F7700526999 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		CDEBFBBB2BC35FA500526999 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		CDEBFBBE2BC3679B00526999 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		CDEBFBC02BC36BE200526999 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,8 @@
 			children = (
 				CDEBFBA72BC35ED300526999 /* BasicNavigationApp.swift */,
 				CDEBFBA92BC35ED300526999 /* ContentView.swift */,
-				CDEBFBBD2BC35FD100526999 /* Pages */,
 				CDEBFBB52BC35F4900526999 /* Toolbar.swift */,
+				CDEBFBBD2BC35FD100526999 /* Pages */,
 				CDEBFBAB2BC35ED400526999 /* Assets.xcassets */,
 				CDEBFBAD2BC35ED400526999 /* Preview Content */,
 			);
@@ -82,7 +86,9 @@
 			children = (
 				CDEBFBB92BC35F7700526999 /* Dashboard.swift */,
 				CDEBFBB72BC35F6500526999 /* Plans.swift */,
+				CDEBFBC02BC36BE200526999 /* Log.swift */,
 				CDEBFBBB2BC35FA500526999 /* More.swift */,
+				CDEBFBBE2BC3679B00526999 /* Profiles.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 				CDEBFBB62BC35F4900526999 /* Toolbar.swift in Sources */,
 				CDEBFBBA2BC35F7700526999 /* Dashboard.swift in Sources */,
 				CDEBFBAA2BC35ED300526999 /* ContentView.swift in Sources */,
+				CDEBFBBF2BC3679B00526999 /* Profiles.swift in Sources */,
 				CDEBFBBC2BC35FA500526999 /* More.swift in Sources */,
+				CDEBFBC12BC36BE200526999 /* Log.swift in Sources */,
 				CDEBFBA82BC35ED300526999 /* BasicNavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
