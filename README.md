@@ -34,6 +34,9 @@ However, FitnessJournal aims to differentiate itself by offering a free, user-fr
 FitnessJournal implements an advertisement-based monetization model, offering all core features and functionalities free of charge to users. Users will be able to access essential tools for tracking their weight loss journey, setting goals, and engaging wit the community with any subscription fees or premium upgrades. The app will display non-intrusive advertisements strategically placed within the user interface, ensuring a seamless and uninterrupted user experience while generating revenue from advertising partners. Additionally, FitnessJournal may explore collaborations with health and wellness brands to offer sponsored content, promotional offers, equipment discounts, etc. further enhancing the app’s value proposition to users. 
 
 ## Initial Design
+### Initial Mock-up
+<img width="3052" alt="Initial Mockup" src="https://github.com/jcholol/FitnessJournal/assets/49222433/39fe61f0-bb4b-4056-a02f-134d4376a01b">
+
 ### UI/UX Design
 Crucial UI
 - (User registration, login)
