@@ -24,6 +24,14 @@
 		CD0487F72BD5061C00FCEA42 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F62BD5061C00FCEA42 /* More.swift */; };
 		CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F82BD5062800FCEA42 /* Plans.swift */; };
 		CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487FA2BD5063400FCEA42 /* Profiles.swift */; };
+		CD0488052BD5193200FCEA42 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488042BD5193200FCEA42 /* MediaItem.swift */; };
+		CD0488092BD51A2F00FCEA42 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488082BD51A2F00FCEA42 /* UserSettings.swift */; };
+		CD04880B2BD51A4700FCEA42 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */; };
+		CD04880D2BD51ACD00FCEA42 /* MediaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */; };
+		CD04880F2BD51BD900FCEA42 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */; };
+		CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */; };
+		CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */; };
+		CD04881A2BD5EBF100FCEA42 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488192BD5EBF100FCEA42 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +53,14 @@
 		CD0487F62BD5061C00FCEA42 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		CD0487F82BD5062800FCEA42 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		CD0487FA2BD5063400FCEA42 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		CD0488042BD5193200FCEA42 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		CD0488082BD51A2F00FCEA42 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemView.swift; sourceTree = "<group>"; };
+		CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
+		CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJournalEntry.swift; sourceTree = "<group>"; };
+		CD0488192BD5EBF100FCEA42 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,13 @@
 			children = (
 				CD0487D42BD504C600FCEA42 /* HW2___StorageApp.swift */,
 				CD0487D62BD504C600FCEA42 /* ContentView.swift */,
+				CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */,
+				CD0488042BD5193200FCEA42 /* MediaItem.swift */,
+				CD0488082BD51A2F00FCEA42 /* UserSettings.swift */,
+				CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */,
+				CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */,
+				CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */,
+				CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */,
 				CD0487FF2BD508F500FCEA42 /* Helper */,
 				CD0487FC2BD508BB00FCEA42 /* Pages */,
 				CD0487E22BD504DD00FCEA42 /* FoodServices.swift */,
@@ -86,6 +109,7 @@
 				CD0487E82BD5051800FCEA42 /* APIService.swift */,
 				CD0487FD2BD508C700FCEA42 /* Model */,
 				CD0487D82BD504C600FCEA42 /* Assets.xcassets */,
+				CD0488192BD5EBF100FCEA42 /* CircleImage.swift */,
 				CD0487DA2BD504C600FCEA42 /* Preview Content */,
 			);
 			path = "HW2 - Storage";
@@ -154,6 +178,8 @@
 			dependencies = (
 			);
 			name = "HW2 - Storage";
+			packageProductDependencies = (
+			);
 			productName = "HW2 - Storage";
 			productReference = CD0487D12BD504C600FCEA42 /* HW2 - Storage.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +208,8 @@
 				Base,
 			);
 			mainGroup = CD0487C82BD504C600FCEA42;
+			packageReferences = (
+			);
 			productRefGroup = CD0487D22BD504C600FCEA42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,13 +243,21 @@
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
 				CD0487E32BD504DD00FCEA42 /* FoodServices.swift in Sources */,
 				CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */,
+				CD04881A2BD5EBF100FCEA42 /* CircleImage.swift in Sources */,
 				CD0487F12BD505E000FCEA42 /* Calories.swift in Sources */,
 				CD0487EF2BD5055900FCEA42 /* Food.swift in Sources */,
+				CD04880B2BD51A4700FCEA42 /* UserSettingsManager.swift in Sources */,
+				CD0488052BD5193200FCEA42 /* MediaItem.swift in Sources */,
+				CD04880D2BD51ACD00FCEA42 /* MediaItemView.swift in Sources */,
+				CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */,
 				CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */,
 				CD0487ED2BD5054A00FCEA42 /* ModelData.swift in Sources */,
+				CD0488092BD51A2F00FCEA42 /* UserSettings.swift in Sources */,
 				CD0487E92BD5051800FCEA42 /* APIService.swift in Sources */,
+				CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */,
 				CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */,
 				CD0487E72BD5050100FCEA42 /* FoodList.swift in Sources */,
+				CD04880F2BD51BD900FCEA42 /* UserSettingsView.swift in Sources */,
 				CD0487F72BD5061C00FCEA42 /* More.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
