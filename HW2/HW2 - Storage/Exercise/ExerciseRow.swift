@@ -1,5 +1,5 @@
 //
-//  FoodRow.swift
+//  ExerciseRow.swift
 //  HW2 - Storage
 //
 //  Created by Yunho Cho on 4/27/24.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct FoodRow: View {
-    let food: FoodItem
+struct ExerciseRow: View {
+    let exercise: Exercise
 
     var body: some View {
         HStack {
-            Text(food.name)
+            Text(exercise.name)
             Spacer()
-            Text(food.calories, format: .number)
+            Text(exercise.calories, format: .number)
         }
     }
 }

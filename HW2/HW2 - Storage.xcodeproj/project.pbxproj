@@ -11,12 +11,6 @@
 		CD0487D72BD504C600FCEA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487D62BD504C600FCEA42 /* ContentView.swift */; };
 		CD0487D92BD504C600FCEA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0487D82BD504C600FCEA42 /* Assets.xcassets */; };
 		CD0487DC2BD504C600FCEA42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0487DB2BD504C600FCEA42 /* Preview Assets.xcassets */; };
-		CD0487E32BD504DD00FCEA42 /* FoodServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487E22BD504DD00FCEA42 /* FoodServices.swift */; };
-		CD0487E52BD504EE00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487E42BD504EE00FCEA42 /* FoodRow.swift */; };
-		CD0487E72BD5050100FCEA42 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487E62BD5050100FCEA42 /* FoodList.swift */; };
-		CD0487E92BD5051800FCEA42 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487E82BD5051800FCEA42 /* APIService.swift */; };
-		CD0487EB2BD5053700FCEA42 /* NutritionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487EA2BD5053700FCEA42 /* NutritionDetails.swift */; };
-		CD0487ED2BD5054A00FCEA42 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487EC2BD5054A00FCEA42 /* ModelData.swift */; };
 		CD0487EF2BD5055900FCEA42 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487EE2BD5055900FCEA42 /* Food.swift */; };
 		CD0487F12BD505E000FCEA42 /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F02BD505E000FCEA42 /* Calories.swift */; };
 		CD0487F32BD505FA00FCEA42 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F22BD505FA00FCEA42 /* Log.swift */; };
@@ -24,14 +18,15 @@
 		CD0487F72BD5061C00FCEA42 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F62BD5061C00FCEA42 /* More.swift */; };
 		CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F82BD5062800FCEA42 /* Plans.swift */; };
 		CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487FA2BD5063400FCEA42 /* Profiles.swift */; };
-		CD0488052BD5193200FCEA42 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488042BD5193200FCEA42 /* MediaItem.swift */; };
-		CD0488092BD51A2F00FCEA42 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488082BD51A2F00FCEA42 /* UserSettings.swift */; };
-		CD04880B2BD51A4700FCEA42 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */; };
-		CD04880D2BD51ACD00FCEA42 /* MediaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */; };
-		CD04880F2BD51BD900FCEA42 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */; };
 		CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */; };
 		CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */; };
-		CD04881A2BD5EBF100FCEA42 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488192BD5EBF100FCEA42 /* CircleImage.swift */; };
+		CD0488202BDCB53900FCEA42 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04881F2BDCB53900FCEA42 /* FoodItem.swift */; };
+		CD0488242BDDB53D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488232BDDB53D00FCEA42 /* FoodRow.swift */; };
+		CD0488262BDDBF9D00FCEA42 /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */; };
+		CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488282BDDC11600FCEA42 /* Exercise.swift */; };
+		CD04882B2BDDC14000FCEA42 /* UpdateExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04882A2BDDC14000FCEA42 /* UpdateExerciseJournal.swift */; };
+		CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */; };
+		CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +35,6 @@
 		CD0487D62BD504C600FCEA42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD0487D82BD504C600FCEA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0487DB2BD504C600FCEA42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CD0487E22BD504DD00FCEA42 /* FoodServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServices.swift; sourceTree = "<group>"; };
-		CD0487E42BD504EE00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
-		CD0487E62BD5050100FCEA42 /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
-		CD0487E82BD5051800FCEA42 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		CD0487EA2BD5053700FCEA42 /* NutritionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetails.swift; sourceTree = "<group>"; };
-		CD0487EC2BD5054A00FCEA42 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		CD0487EE2BD5055900FCEA42 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		CD0487F02BD505E000FCEA42 /* Calories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
 		CD0487F22BD505FA00FCEA42 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -53,14 +42,15 @@
 		CD0487F62BD5061C00FCEA42 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		CD0487F82BD5062800FCEA42 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		CD0487FA2BD5063400FCEA42 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
-		CD0488042BD5193200FCEA42 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
-		CD0488082BD51A2F00FCEA42 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
-		CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemView.swift; sourceTree = "<group>"; };
-		CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJournalEntry.swift; sourceTree = "<group>"; };
-		CD0488192BD5EBF100FCEA42 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		CD04881F2BDCB53900FCEA42 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		CD0488232BDDB53D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodRow.swift; path = "HW2 - Storage/Food/FoodRow.swift"; sourceTree = SOURCE_ROOT; };
+		CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
+		CD0488282BDDC11600FCEA42 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		CD04882A2BDDC14000FCEA42 /* UpdateExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseJournal.swift; sourceTree = "<group>"; };
+		CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseJournal.swift; sourceTree = "<group>"; };
+		CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,21 +85,12 @@
 			children = (
 				CD0487D42BD504C600FCEA42 /* HW2___StorageApp.swift */,
 				CD0487D62BD504C600FCEA42 /* ContentView.swift */,
-				CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */,
-				CD0488042BD5193200FCEA42 /* MediaItem.swift */,
-				CD0488082BD51A2F00FCEA42 /* UserSettings.swift */,
-				CD04880A2BD51A4700FCEA42 /* UserSettingsManager.swift */,
-				CD04880C2BD51ACD00FCEA42 /* MediaItemView.swift */,
-				CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */,
-				CD04880E2BD51BD900FCEA42 /* UserSettingsView.swift */,
 				CD0487FF2BD508F500FCEA42 /* Helper */,
 				CD0487FC2BD508BB00FCEA42 /* Pages */,
-				CD0487E22BD504DD00FCEA42 /* FoodServices.swift */,
+				CD0488272BDDC02600FCEA42 /* Exercise */,
 				CD0487FE2BD508E200FCEA42 /* Food */,
-				CD0487E82BD5051800FCEA42 /* APIService.swift */,
 				CD0487FD2BD508C700FCEA42 /* Model */,
 				CD0487D82BD504C600FCEA42 /* Assets.xcassets */,
-				CD0488192BD5EBF100FCEA42 /* CircleImage.swift */,
 				CD0487DA2BD504C600FCEA42 /* Preview Content */,
 			);
 			path = "HW2 - Storage";
@@ -131,6 +112,7 @@
 				CD0487F62BD5061C00FCEA42 /* More.swift */,
 				CD0487F82BD5062800FCEA42 /* Plans.swift */,
 				CD0487FA2BD5063400FCEA42 /* Profiles.swift */,
+				CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -138,7 +120,8 @@
 		CD0487FD2BD508C700FCEA42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD0487EC2BD5054A00FCEA42 /* ModelData.swift */,
+				CD04881F2BDCB53900FCEA42 /* FoodItem.swift */,
+				CD0488282BDDC11600FCEA42 /* Exercise.swift */,
 				CD0487EE2BD5055900FCEA42 /* Food.swift */,
 			);
 			path = Model;
@@ -147,9 +130,9 @@
 		CD0487FE2BD508E200FCEA42 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				CD0487E42BD504EE00FCEA42 /* FoodRow.swift */,
-				CD0487E62BD5050100FCEA42 /* FoodList.swift */,
-				CD0487EA2BD5053700FCEA42 /* NutritionDetails.swift */,
+				CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */,
+				CD0488232BDDB53D00FCEA42 /* FoodRow.swift */,
+				CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -160,6 +143,16 @@
 				CD0487F02BD505E000FCEA42 /* Calories.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		CD0488272BDDC02600FCEA42 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				CD04882A2BDDC14000FCEA42 /* UpdateExerciseJournal.swift */,
+				CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */,
+				CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,29 +229,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0487E52BD504EE00FCEA42 /* FoodRow.swift in Sources */,
-				CD0487EB2BD5053700FCEA42 /* NutritionDetails.swift in Sources */,
 				CD0487F32BD505FA00FCEA42 /* Log.swift in Sources */,
+				CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */,
+				CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */,
 				CD0487D72BD504C600FCEA42 /* ContentView.swift in Sources */,
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
-				CD0487E32BD504DD00FCEA42 /* FoodServices.swift in Sources */,
 				CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */,
-				CD04881A2BD5EBF100FCEA42 /* CircleImage.swift in Sources */,
 				CD0487F12BD505E000FCEA42 /* Calories.swift in Sources */,
+				CD0488242BDDB53D00FCEA42 /* FoodRow.swift in Sources */,
+				CD0488262BDDBF9D00FCEA42 /* ExerciseLog.swift in Sources */,
 				CD0487EF2BD5055900FCEA42 /* Food.swift in Sources */,
-				CD04880B2BD51A4700FCEA42 /* UserSettingsManager.swift in Sources */,
-				CD0488052BD5193200FCEA42 /* MediaItem.swift in Sources */,
-				CD04880D2BD51ACD00FCEA42 /* MediaItemView.swift in Sources */,
+				CD04882B2BDDC14000FCEA42 /* UpdateExerciseJournal.swift in Sources */,
 				CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */,
 				CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */,
-				CD0487ED2BD5054A00FCEA42 /* ModelData.swift in Sources */,
-				CD0488092BD51A2F00FCEA42 /* UserSettings.swift in Sources */,
-				CD0487E92BD5051800FCEA42 /* APIService.swift in Sources */,
+				CD0488202BDCB53900FCEA42 /* FoodItem.swift in Sources */,
 				CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */,
 				CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */,
-				CD0487E72BD5050100FCEA42 /* FoodList.swift in Sources */,
-				CD04880F2BD51BD900FCEA42 /* UserSettingsView.swift in Sources */,
 				CD0487F72BD5061C00FCEA42 /* More.swift in Sources */,
+				CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
