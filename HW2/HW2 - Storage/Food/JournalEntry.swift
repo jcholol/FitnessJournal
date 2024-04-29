@@ -10,6 +10,7 @@ import SwiftUI
 struct JournalEntry: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
+    @Binding var selectedDate: Date
 
     @State private var name: String = ""
     @State private var calories: Double = 0
@@ -27,14 +28,13 @@ struct JournalEntry: View {
                 TextField("Name of Food", text: $name)
                 TextField("Amount of calories in kCal", value: $calories, formatter: calorieFormatter)
                     .keyboardType(.decimalPad)
-                DatePicker("Date", selection: $entryDate, displayedComponents: .date)
             }
             .navigationTitle("Add Food")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Save") {
-                        let food = FoodItem(name: name, calories: calories, date: entryDate)
+                        let food = FoodItem(name: name, calories: calories, date: selectedDate)
                         context.insert(food)
                         dismiss()
                     }

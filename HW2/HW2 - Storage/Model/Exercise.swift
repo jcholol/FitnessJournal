@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 class Exercise {
-    @Attribute(.unique) var name: String
-    var calories: Double
+    var name: String
+    var duration: Int
     var date: Date
 
-    init(name: String, calories: Double, date: Date) {
+    init(name: String, duration: Int, date: Date) {
         self.name = name
-        self.calories = calories
+        self.duration = duration
         self.date = date
     }
 }

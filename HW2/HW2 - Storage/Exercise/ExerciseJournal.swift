@@ -11,11 +11,12 @@ struct ExerciseJournal: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
 
+    @Binding var selectedDate: Date
     @State private var name: String = ""
-    @State private var calories: Double = 0
+    @State private var duration: Int = 0
     @State private var entryDate: Date = .init()
 
-    private let calorieFormatter: NumberFormatter = {
+    private let durationFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.zeroSymbol = ""
         return formatter
@@ -25,16 +26,15 @@ struct ExerciseJournal: View {
         NavigationStack {
             Form {
                 TextField("Name of Activity", text: $name)
-                TextField("FIX THIS (Amount of calories in kCal)", value: $calories, formatter: calorieFormatter)
+                TextField("Duration", value: $duration, formatter: durationFormatter)
                     .keyboardType(.decimalPad)
-                DatePicker("Date", selection: $entryDate, displayedComponents: .date)
             }
             .navigationTitle("Add Activity")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Save") {
-                        let exercise = FoodItem(name: name, calories: calories, date: entryDate)
+                        let exercise = Exercise(name: name, duration: duration, date: selectedDate)
                         context.insert(exercise)
                         dismiss()
                     }
@@ -47,8 +47,4 @@ struct ExerciseJournal: View {
             }
         }
     }
-}
-
-#Preview {
-    ExerciseJournal()
 }

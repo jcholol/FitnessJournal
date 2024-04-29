@@ -14,53 +14,30 @@ import SwiftUI
 struct Dashboard: View {
     @Environment(\.modelContext) var context
 
-    @State private var calorieGoal: Int = 2000
-    @State private var calories: Double = 0.0
+    @Binding var selectedDate: Date
+    @Binding var calorieGoal: Double
+    @Binding var calories: Double
 
-    @State private var showingDatePicker = false
-    @State private var dailyCalorieGoal: String = ""
-
-    var dateFormatter: DateFormatter {
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "MMM"
-        dateFormat.dateStyle = .medium
-        dateFormat.doesRelativeDateFormatting = true
-        return dateFormat
-    }
-
-    @State private var selectedDate = Date()
     @Query var foods: [FoodItem]
-    @Query var exercise: [Exercise]
+    @Query var exercises: [Exercise]
 
     @State private var filteredFoods = []
     @State private var filteredExercise = []
 
-    var body: some View {
-        let progress: Double = 1 - (calories / 1000)
-        VStack {
-            HStack {
-                Text("\(selectedDate, formatter: dateFormatter)")
-                    .font(.title)
-                    .bold()
+    var filterExercise: [Exercise] {
+        return exercises.filter { Calendar.current.compare($0.date, to: selectedDate, toGranularity: .day) == .orderedSame }
+    }
 
-                ZStack {
-                    DatePicker("", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
-                        .labelsHidden()
-                        .frame(width: 32, height: 32)
-                        .datePickerStyle(.compact)
-                        .clipped()
-                    SwiftUIWrapper {
-                        Image(systemName: "calendar")
-                            .resizable()
-                            .frame(width: 32, height: 32, alignment: .topLeading)
-                            .scaledToFit()
-                    }
-                    .frame(width: 32, height: 32, alignment: .center)
-                    .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
-                }
-            }
+    var filterFoodItem: [FoodItem] {
+        return foods.filter { Calendar.current.compare($0.date, to: selectedDate, toGranularity: .day) == .orderedSame }
+    }
+
+    var body: some View {
+        VStack {
+            let calories = filterFoodItem.map { $0.calories }.reduce(0, +)
+            let progress: Double = 1 - (calories / calorieGoal)
             HStack {
-                Calories(calorieGoal: calorieGoal, progress: progress)
+                Calories(calorieGoal: calorieGoal, calories: calories, progress: progress)
                 Spacer()
                     .frame(width: 150, height: 20)
             }
@@ -71,17 +48,4 @@ struct Dashboard: View {
             Spacer()
         }
     }
-}
-
-struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
-    let content: () -> T
-    func makeUIViewController(context: Context) -> UIHostingController<T> {
-        UIHostingController(rootView: content())
-    }
-
-    func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
-}
-
-#Preview {
-    Dashboard()
 }

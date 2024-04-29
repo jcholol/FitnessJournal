@@ -32,3 +32,5 @@ struct UpdateJournalEntry: View {
         }
     }
 }
+
+

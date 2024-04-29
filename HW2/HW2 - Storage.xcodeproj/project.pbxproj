@@ -21,12 +21,12 @@
 		CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */; };
 		CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */; };
 		CD0488202BDCB53900FCEA42 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04881F2BDCB53900FCEA42 /* FoodItem.swift */; };
-		CD0488242BDDB53D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488232BDDB53D00FCEA42 /* FoodRow.swift */; };
 		CD0488262BDDBF9D00FCEA42 /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */; };
 		CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488282BDDC11600FCEA42 /* Exercise.swift */; };
 		CD04882B2BDDC14000FCEA42 /* UpdateExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04882A2BDDC14000FCEA42 /* UpdateExerciseJournal.swift */; };
 		CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */; };
 		CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */; };
+		CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +45,12 @@
 		CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJournalEntry.swift; sourceTree = "<group>"; };
 		CD04881F2BDCB53900FCEA42 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
-		CD0488232BDDB53D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodRow.swift; path = "HW2 - Storage/Food/FoodRow.swift"; sourceTree = SOURCE_ROOT; };
 		CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
 		CD0488282BDDC11600FCEA42 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		CD04882A2BDDC14000FCEA42 /* UpdateExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseJournal.swift; sourceTree = "<group>"; };
 		CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseJournal.swift; sourceTree = "<group>"; };
 		CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
+		CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0488152BD5E5B900FCEA42 /* UpdateJournalEntry.swift */,
-				CD0488232BDDB53D00FCEA42 /* FoodRow.swift */,
+				CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */,
 				CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */,
 			);
 			path = Food;
@@ -236,7 +236,6 @@
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
 				CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */,
 				CD0487F12BD505E000FCEA42 /* Calories.swift in Sources */,
-				CD0488242BDDB53D00FCEA42 /* FoodRow.swift in Sources */,
 				CD0488262BDDBF9D00FCEA42 /* ExerciseLog.swift in Sources */,
 				CD0487EF2BD5055900FCEA42 /* Food.swift in Sources */,
 				CD04882B2BDDC14000FCEA42 /* UpdateExerciseJournal.swift in Sources */,
@@ -246,6 +245,7 @@
 				CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */,
 				CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */,
 				CD0487F72BD5061C00FCEA42 /* More.swift in Sources */,
+				CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */,
 				CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

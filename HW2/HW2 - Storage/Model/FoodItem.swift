@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class FoodItem {
-    @Attribute(.unique) var name: String
+    var name: String
     var calories: Double
     var date: Date
 

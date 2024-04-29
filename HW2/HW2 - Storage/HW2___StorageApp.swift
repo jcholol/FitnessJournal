@@ -11,11 +11,11 @@ import SwiftUI
 @main
 struct HW2___StorageApp: App {
     // Using container outside of swiftui hierachy
-    let container: ModelContainer = {
-        let schema = Schema([FoodItem.self])
-        let container = try! ModelContainer(for: schema, configurations: [])
-        return container
-    }()
+//    let container: ModelContainer = {
+//        let schema = Schema([FoodItem.self])
+//        let container = try! ModelContainer(for: schema, configurations: [])
+//        return container
+//    }()
 
     var body: some Scene {
         WindowGroup {

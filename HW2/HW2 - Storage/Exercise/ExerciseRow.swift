@@ -14,7 +14,7 @@ struct ExerciseRow: View {
         HStack {
             Text(exercise.name)
             Spacer()
-            Text(exercise.calories, format: .number)
+            Text(exercise.duration, format: .number)
         }
     }
 }

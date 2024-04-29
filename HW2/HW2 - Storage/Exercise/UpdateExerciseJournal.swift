@@ -15,9 +15,8 @@ struct UpdateExerciseJournal: View {
         NavigationStack {
             Form {
                 TextField("Name of Activity", text: $exercise.name)
-                TextField("Amount of calories", value: $exercise.calories, format: .number)
+                TextField("Amount of calories", value: $exercise.duration, format: .number)
                     .keyboardType(.decimalPad)
-                DatePicker("Date", selection: $exercise.date, displayedComponents: .date)
             }
             .navigationTitle("Update Activity")
             .navigationBarTitleDisplayMode(.large)
