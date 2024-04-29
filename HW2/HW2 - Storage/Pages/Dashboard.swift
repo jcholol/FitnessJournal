@@ -36,16 +36,24 @@ struct Dashboard: View {
         VStack {
             let calories = filterFoodItem.map { $0.calories }.reduce(0, +)
             let progress: Double = 1 - (calories / calorieGoal)
-            HStack {
-                Calories(calorieGoal: calorieGoal, calories: calories, progress: progress)
+            VStack(alignment: .leading) {
+                Text("Calories")
+                    .font(.title)
+                    .bold()
+                Text("Remaining = Goal - Food")
+                    .font(.subheadline)
+                    .bold()
+                HStack {
+                    Calories(calorieGoal: calorieGoal, calories: calories, progress: progress)
+                    Spacer()
+                        .frame(width: 150, height: 20)
+                }
+                .padding()
+
+                Spacer().frame(height: 30)
+
                 Spacer()
-                    .frame(width: 150, height: 20)
             }
-            .padding()
-
-            Spacer().frame(height: 30)
-
-            Spacer()
         }
     }
 }

@@ -20,7 +20,7 @@ struct ContentView: View {
     @State var selectedDate = Date.now
     var dateFormatter: DateFormatter {
         let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "MMM"
+        dateFormat.dateFormat = "MMM dd, yyyy"
         dateFormat.dateStyle = .medium
         dateFormat.doesRelativeDateFormatting = true
         return dateFormat
@@ -28,19 +28,42 @@ struct ContentView: View {
 
     var body: some View {
         HStack {
-            Text("\(selectedDate, formatter: dateFormatter)")
-                .font(.title)
-                .bold()
+            HStack {
+                Button(action: {
+                    // Subtract one day from the current `selectedDate`
+                    if let newDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate) {
+                        selectedDate = newDate
+                    }
+                }) {
+                    Image(systemName: "chevron.left")
+                }
+
+                Text("\(selectedDate, formatter: dateFormatter)")
+                    .font(.title)
+                    .bold()
+
+                Button(action: {
+                    // Add one day to the current `selectedDate`
+                    if let newDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate) {
+                        selectedDate = newDate
+                    }
+                }) {
+                    Image(systemName: "chevron.right")
+                }
+            }
 
             ZStack {
-                DatePicker("", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
+                Spacer()
+                DatePicker("", selection: $selectedDate, displayedComponents: .date)
                     .onChange(of: selectedDate) { _, newDate in
                         $selectedDate.wrappedValue = newDate
                     }
                     .labelsHidden()
                     .frame(width: 32, height: 32)
                     .datePickerStyle(.compact)
+                    .compositingGroup()
                     .clipped()
+                    .contentShape(Rectangle())
 
                 SwiftUIWrapper {
                     Image(systemName: "calendar")
@@ -48,8 +71,8 @@ struct ContentView: View {
                         .frame(width: 32, height: 32, alignment: .topLeading)
                         .scaledToFit()
                 }
-                .frame(width: 32, height: 32, alignment: .center)
-                .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
+                .frame(width: 32, height: 32)
+                .allowsHitTesting(false)
             }
         }
         HStack {
