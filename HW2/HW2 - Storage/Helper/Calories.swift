@@ -26,7 +26,7 @@ struct Calories: View {
                 .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                 .animation(.easeOut, value: progress)
             VStack {
-                Text(String(calorieGoal - calories))
+                Text(String(format: "%.0f", calorieGoal - calories))
                     .bold()
                     .font(.title)
                 Text("remaining")

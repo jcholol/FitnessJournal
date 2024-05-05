@@ -15,6 +15,7 @@ struct ExerciseRow: View {
             Text(exercise.name)
             Spacer()
             Text(exercise.duration, format: .number)
+//            Text(exercise.calories, format: .number)
         }
     }
 }

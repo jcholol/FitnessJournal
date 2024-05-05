@@ -11,8 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.modelContext) var context
 
+    @State private var isProfileOpen: Bool = false
+
     @State private var calorieGoal: Double = 2000
-    @State private var calories: Double = 0.0
 
     @State private var showingDatePicker = false
     @State private var dailyCalorieGoal: String = ""
@@ -27,57 +28,71 @@ struct ContentView: View {
     }
 
     var body: some View {
-        HStack {
-            HStack {
-                Button(action: {
-                    // Subtract one day from the current `selectedDate`
-                    if let newDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate) {
-                        selectedDate = newDate
-                    }
-                }) {
-                    Image(systemName: "chevron.left")
-                }
+        ZStack {
+            VStack {
+                HStack {
+                    HStack {
+                        Button(action: {
+                            // Subtract one day from the current `selectedDate`
+                            if let newDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate) {
+                                selectedDate = newDate
+                            }
+                        }) {
+                            Image(systemName: "chevron.left")
+                        }
 
-                Text("\(selectedDate, formatter: dateFormatter)")
-                    .font(.title)
-                    .bold()
+                        Text("\(selectedDate, formatter: dateFormatter)")
+                            .font(.title)
+                            .bold()
 
-                Button(action: {
-                    // Add one day to the current `selectedDate`
-                    if let newDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate) {
-                        selectedDate = newDate
+                        Button(action: {
+                            // Add one day to the current `selectedDate`
+                            if let newDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate) {
+                                selectedDate = newDate
+                            }
+                        }) {
+                            Image(systemName: "chevron.right")
+                        }
                     }
-                }) {
-                    Image(systemName: "chevron.right")
+
+                    ZStack {
+                        Spacer()
+                        DatePicker("", selection: $selectedDate, displayedComponents: .date)
+                            .onChange(of: selectedDate) { _, newDate in
+                                $selectedDate.wrappedValue = newDate
+                            }
+                            .labelsHidden()
+                            .frame(width: 32, height: 32)
+                            .datePickerStyle(.compact)
+                            .compositingGroup()
+                            .clipped()
+                            .contentShape(Rectangle())
+
+                        SwiftUIWrapper {
+                            Image(systemName: "calendar")
+                                .resizable()
+                                .frame(width: 32, height: 32, alignment: .topLeading)
+                                .scaledToFit()
+                        }
+                        .frame(width: 32, height: 32)
+                        .allowsHitTesting(false)
+                    }
+                    .ignoresSafeArea()
                 }
             }
-
-            ZStack {
-                Spacer()
-                DatePicker("", selection: $selectedDate, displayedComponents: .date)
-                    .onChange(of: selectedDate) { _, newDate in
-                        $selectedDate.wrappedValue = newDate
-                    }
-                    .labelsHidden()
-                    .frame(width: 32, height: 32)
-                    .datePickerStyle(.compact)
-                    .compositingGroup()
-                    .clipped()
-                    .contentShape(Rectangle())
-
-                SwiftUIWrapper {
-                    Image(systemName: "calendar")
-                        .resizable()
-                        .frame(width: 32, height: 32, alignment: .topLeading)
-                        .scaledToFit()
-                }
-                .frame(width: 32, height: 32)
-                .allowsHitTesting(false)
+            Button(action: {
+                isProfileOpen = true
+            }) {
+                Image(systemName: "person.crop.circle.fill")
+                    .resizable()
+                    .frame(width: 30, height: 30)
             }
+            .padding(.leading, 20)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         HStack {
             TabView {
-                Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal, calories: $calories)
+                Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
                     .tabItem {
                         Image(systemName: "square.grid.3x3.middle.fill")
                         Text("Dashboard")
@@ -92,15 +107,24 @@ struct ContentView: View {
                         Image(systemName: "figure.strengthtraining.traditional")
                         Text("Exercise")
                     }
-                Plans()
-                    .tabItem {
-                        Image(systemName: "pencil.and.list.clipboard")
-                        Text("Diet Plans")
-                    }
-                More()
-                    .tabItem {
-                        Image(systemName: "ellipsis")
-                        Text("More")
+//                Plans()
+//                    .tabItem {
+//                        Image(systemName: "pencil.and.list.clipboard")
+//                        Text("Diet Plans")
+//                    }
+            }
+        }
+        .sheet(isPresented: $isProfileOpen) {
+            NavigationStack {
+                Profiles()
+                    .toolbar {
+                        ToolbarItem {
+                            Button(action: {
+                                isProfileOpen = false
+                            }) {
+                                Text("Done")
+                            }
+                        }
                     }
             }
         }

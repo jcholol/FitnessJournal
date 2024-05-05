@@ -27,7 +27,7 @@ struct JournalEntry: View {
             Form {
                 TextField("Name of Food", text: $name)
                 TextField("Amount of calories in kCal", value: $calories, formatter: calorieFormatter)
-                    .keyboardType(.decimalPad)
+                    .keyboardType(.numberPad)
             }
             .navigationTitle("Add Food")
             .navigationBarTitleDisplayMode(.large)

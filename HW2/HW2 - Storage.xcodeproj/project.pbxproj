@@ -15,7 +15,6 @@
 		CD0487F12BD505E000FCEA42 /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F02BD505E000FCEA42 /* Calories.swift */; };
 		CD0487F32BD505FA00FCEA42 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F22BD505FA00FCEA42 /* Log.swift */; };
 		CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F42BD5060E00FCEA42 /* Dashboard.swift */; };
-		CD0487F72BD5061C00FCEA42 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F62BD5061C00FCEA42 /* More.swift */; };
 		CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487F82BD5062800FCEA42 /* Plans.swift */; };
 		CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0487FA2BD5063400FCEA42 /* Profiles.swift */; };
 		CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */; };
@@ -27,6 +26,7 @@
 		CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */; };
 		CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */; };
 		CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */; };
+		CDE0113E2BE3439E00252E1F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0113D2BE3439E00252E1F /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		CD0487F02BD505E000FCEA42 /* Calories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
 		CD0487F22BD505FA00FCEA42 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		CD0487F42BD5060E00FCEA42 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
-		CD0487F62BD5061C00FCEA42 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		CD0487F82BD5062800FCEA42 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		CD0487FA2BD5063400FCEA42 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
 		CD0488132BD5DA7400FCEA42 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		CD04882E2BDDC15600FCEA42 /* ExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseJournal.swift; sourceTree = "<group>"; };
 		CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
 		CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		CDE0113D2BE3439E00252E1F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,6 @@
 			children = (
 				CD0487F42BD5060E00FCEA42 /* Dashboard.swift */,
 				CD0487F22BD505FA00FCEA42 /* Log.swift */,
-				CD0487F62BD5061C00FCEA42 /* More.swift */,
 				CD0487F82BD5062800FCEA42 /* Plans.swift */,
 				CD0487FA2BD5063400FCEA42 /* Profiles.swift */,
 				CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */,
@@ -123,6 +122,7 @@
 				CD04881F2BDCB53900FCEA42 /* FoodItem.swift */,
 				CD0488282BDDC11600FCEA42 /* Exercise.swift */,
 				CD0487EE2BD5055900FCEA42 /* Food.swift */,
+				CDE0113D2BE3439E00252E1F /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,8 +244,8 @@
 				CD0488202BDCB53900FCEA42 /* FoodItem.swift in Sources */,
 				CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */,
 				CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */,
-				CD0487F72BD5061C00FCEA42 /* More.swift in Sources */,
 				CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */,
+				CDE0113E2BE3439E00252E1F /* UserInfo.swift in Sources */,
 				CD04882F2BDDC15600FCEA42 /* ExerciseJournal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

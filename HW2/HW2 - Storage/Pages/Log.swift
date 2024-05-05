@@ -66,3 +66,7 @@ struct Log: View {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}

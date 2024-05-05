@@ -14,9 +14,10 @@ struct ExerciseJournal: View {
     @Binding var selectedDate: Date
     @State private var name: String = ""
     @State private var duration: Int = 0
+//    @State private var calories: Double = 0
     @State private var entryDate: Date = .init()
 
-    private let durationFormatter: NumberFormatter = {
+    private let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.zeroSymbol = ""
         return formatter
@@ -26,8 +27,10 @@ struct ExerciseJournal: View {
         NavigationStack {
             Form {
                 TextField("Name of Activity", text: $name)
-                TextField("Duration", value: $duration, formatter: durationFormatter)
-                    .keyboardType(.decimalPad)
+                TextField("Duration", value: $duration, formatter: formatter)
+                    .keyboardType(.numberPad)
+//                TextField("Calories", value: $calories, formatter: formatter)
+//                    .keyboardType(.numberPad)
             }
             .navigationTitle("Add Activity")
             .navigationBarTitleDisplayMode(.large)
