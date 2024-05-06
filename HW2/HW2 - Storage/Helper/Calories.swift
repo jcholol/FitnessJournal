@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Calories: View {
     @State var width: CGFloat = 175
-    var calorieGoal: Int
+    var calorieGoal: Double
+    var calories: Double
     let progress: Double
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct Calories: View {
                 .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                 .animation(.easeOut, value: progress)
             VStack {
-                Text(String(calorieGoal))
+                Text(String(format: "%.0f", calorieGoal - calories))
                     .bold()
                     .font(.title)
                 Text("remaining")

@@ -14,74 +14,90 @@ import SwiftUI
 struct Dashboard: View {
     @Environment(\.modelContext) var context
 
-    @State private var calorieGoal: Int = 2000
-    @State private var calories: Double = 0.0
-
-    @State private var showingDatePicker = false
-    @State private var dailyCalorieGoal: String = ""
-
-    var dateFormatter: DateFormatter {
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "MMM"
-        dateFormat.dateStyle = .medium
-        dateFormat.doesRelativeDateFormatting = true
-        return dateFormat
-    }
-
-    @State private var selectedDate = Date()
-    @Query var foods: [FoodItem]
-    @Query var exercise: [Exercise]
+    @Binding var selectedDate: Date
+    @Binding var calorieGoal: Double
 
     @State private var filteredFoods = []
     @State private var filteredExercise = []
 
+    @Query var foods: [FoodItem]
+    @Query var exercises: [Exercise]
+
+    var filterExercise: [Exercise] {
+        return exercises.filter { Calendar.current.compare($0.date, to: selectedDate, toGranularity: .day) == .orderedSame }
+    }
+
+    var filterFoodItem: [FoodItem] {
+        return foods.filter { Calendar.current.compare($0.date, to: selectedDate, toGranularity: .day) == .orderedSame }
+    }
+
     var body: some View {
-        let progress: Double = 1 - (calories / 1000)
         VStack {
             HStack {
-                Text("\(selectedDate, formatter: dateFormatter)")
-                    .font(.title)
-                    .bold()
+                let caloriesConsumed = filterFoodItem.map { $0.calories }.reduce(0, +)
+                let caloriesBurned = 100 /* filterExercise.map { $0.calories }.reduce(0, +) */
+                let progress: Double = 1 - (caloriesConsumed / calorieGoal)
 
-                ZStack {
-                    DatePicker("", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
-                        .labelsHidden()
-                        .frame(width: 32, height: 32)
-                        .datePickerStyle(.compact)
-                        .clipped()
-                    SwiftUIWrapper {
-                        Image(systemName: "calendar")
-                            .resizable()
-                            .frame(width: 32, height: 32, alignment: .topLeading)
-                            .scaledToFit()
+                VStack(alignment: .leading) {
+                    GroupBox {
+                        Text("Remaining = Goal - Food + Exercise")
+                            .font(.subheadline)
+                            .bold()
+                        GroupBox {
+                            HStack {
+                                HStack {
+                                    Calories(calorieGoal: calorieGoal, calories: caloriesConsumed, progress: progress)
+                                    Spacer()
+
+                                    VStack(alignment: .leading) {
+                                        let goal = Image(systemName: "flag.checkered")
+                                        Text("\(goal) \(calorieGoal, specifier: "%.0f")")
+                                            .font(.title2)
+                                        let fuel = Image(systemName: "takeoutbag.and.cup.and.straw")
+                                        Text("\(fuel) \(caloriesConsumed, specifier: "%.0f")")
+                                            .font(.title2)
+                                        let burn = Image(systemName: "figure.cooldown")
+                                        Text("\(burn) \(caloriesBurned, specifier: "%.0f")")
+                                            .font(.title2)
+                                    }
+                                    .padding()
+                                    .frame(width: 130)
+                                }
+                            }
+                        }
+                        .groupBoxStyle(.calorie)
+                    } label: {
+                        Label("Calories", systemImage: "medal.fill")
                     }
-                    .frame(width: 32, height: 32, alignment: .center)
-                    .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
+                    .groupBoxStyle(.calorie)
+                    .padding()
+
+                    Spacer()
                 }
             }
-            HStack {
-                Calories(calorieGoal: calorieGoal, progress: progress)
-                Spacer()
-                    .frame(width: 150, height: 20)
-            }
-            .padding()
-
-            Spacer().frame(height: 30)
-
-            Spacer()
         }
     }
 }
 
-struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
-    let content: () -> T
-    func makeUIViewController(context: Context) -> UIHostingController<T> {
-        UIHostingController(rootView: content())
+struct CalorieGroupBoxStyle: GroupBoxStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(alignment: .leading) {
+            configuration.label
+                .bold()
+                .font(.title)
+            configuration.content
+                .font(.subheadline)
+                .bold()
+        }
+        .padding()
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20))
     }
+}
 
-    func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
+extension GroupBoxStyle where Self == CalorieGroupBoxStyle {
+    static var calorie: CalorieGroupBoxStyle { .init() }
 }
 
 #Preview {
-    Dashboard()
+    ContentView()
 }

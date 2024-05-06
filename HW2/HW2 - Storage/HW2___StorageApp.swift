@@ -10,18 +10,21 @@ import SwiftUI
 
 @main
 struct HW2___StorageApp: App {
-    // Using container outside of swiftui hierachy
-    let container: ModelContainer = {
-        let schema = Schema([FoodItem.self])
-        let container = try! ModelContainer(for: schema, configurations: [])
-        return container
-    }()
+//    let modelContainer: ModelContainer
+//
+//    init() {
+//        do {
+//            modelContainer = try ModelContainer(for: FoodItem.self, Exercise.self, UserInfo.self)
+//        } catch {
+//            fatalError("Could not initialize ModelContainer")
+//        }
+//    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: [FoodItem.self, Exercise.self])
-//        .modelContainer(container)
+        .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self])
+//        .modelContainer(modelContainer)
     }
 }

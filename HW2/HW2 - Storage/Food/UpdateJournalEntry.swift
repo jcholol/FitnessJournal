@@ -17,7 +17,7 @@ struct UpdateJournalEntry: View {
             Form {
                 TextField("Name of Food", text: $food.name)
                 TextField("Amount of calories", value: $food.calories, format: .number)
-                    .keyboardType(.decimalPad)
+                    .keyboardType(.numberPad)
                 DatePicker("Date", selection: $food.date, displayedComponents: .date)
             }
             .navigationTitle("Update Food")

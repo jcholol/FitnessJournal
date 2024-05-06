@@ -1,7 +1,7 @@
 # FitnessJournal
 
 ## Summary of Project
-FitnessJournal is a weight loss tracking application designed to unite individuals on similar weight loss journeys. Inspired by the success of MyFitnessPal, FitnessJournal emphasizes collaboration and support in achieving weight loss goals. With 2.5 billion adults worldwide classified as overweight by the World Health Organization (WHO), effective weight loss tools are paramount. Research from the Centers for Disease Control and Prevention (CDC) demonstrates that working out with a friend increases motivation and consistency. FitnessJournal aims to harness this principle by offering personal food and exercise journaling, story posting, and journal matching options—all free of charge. FitnessJournal endeavors to contribute to a healthier world, one step at a time by providing a platform for mutual support and accountability.
+FitnessJournal is a weight loss tracking application designed to unite individuals on similar weight loss journeys. Inspired by the success of MyFitnessPal, FitnessJournal emphasizes collaboration and support in achieving weight loss goals. With 2.5 billion adults worldwide classified as overweight by the World Health Organization (WHO), effective weight loss tools are paramount. Research from the Centers for Disease Control and Prevention (CDC) demonstrates that working out with a friend increases motivation and consistency. FitnessJournal aims to harness this principle by offering personal food and exercise journaling, <strike>story posting, and journal matching options</strike>—all free of charge. FitnessJournal endeavors to contribute to a healthier world, one step at a time by providing a platform for mutual support and accountability.
 
 ## Project Proposal | Project Analysis
 
@@ -37,7 +37,8 @@ FitnessJournal implements an advertisement-based monetization model, offering al
 
 ## Initial Design
 ### Initial Mock-up
-<img width="3052" alt="Initial Mockup" src="https://github.com/jcholol/FitnessJournal/assets/49222433/39fe61f0-bb4b-4056-a02f-134d4376a01b">
+<img width="3880" alt="prototype" src="https://github.com/jcholol/FitnessJournal/assets/49222433/39f3427a-0a73-4b68-8ea9-a4e2f0bfd224">
+
 
 ### UI/UX Design
 Crucial UI
@@ -51,12 +52,12 @@ Crucial UI
 
 ### Technical Architecture
 Necessary components/interactions
-- List log of dates 
+- List log of dates (ITS DONE BUT USER AUTHENTICATION IS NOT)
   - Register as a user (implies database, password encryption)
   - Add to log (implies storage)
-- Search exercises or foods
+- Search exercises or foods (IN PROGRESS)
   - Search algorithm/engine (implies some sort of indexing, database searching
-- Select exercises or foods and store into a personal journal
+- Select exercises or foods and store into a personal journal (IN PROGRESS)
   - Application component (implies UI, Swift, etc.).
   - Public API -> Provide the exercise and food ID
 - Journal Matching? Story Posting? Messaging with matches?
