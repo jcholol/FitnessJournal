@@ -27,7 +27,7 @@ struct Profiles: View {
                                 .frame(width: 28, height: 28)
                             Image(systemName: "sun.max.fill").foregroundColor(.white)
                         }
-                        Toggle("App Appearance", systemImage: "moon.fill", isOn: $isDarkMode)
+//                        Toggle("App Appearance", systemImage: "moon.fill", isOn: $isDarkMode)
                     }
                 }
             }.navigationTitle("Account Settings")
