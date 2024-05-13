@@ -9,16 +9,18 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isDarkMode") var isDarkMode: Bool = UserDefaults.standard.bool(forKey: "isDarkMode")
+
     @Environment(\.modelContext) var context
 
     @State private var isProfileOpen: Bool = false
-
-    @State private var calorieGoal: Double = 2000
-
+    @State var selectedDate = Date.now
     @State private var showingDatePicker = false
     @State private var dailyCalorieGoal: String = ""
 
-    @State var selectedDate = Date.now
+    // Load and save calorieGoal using UserDefaults
+    @State private var calorieGoal: Double = UserDefaults.standard.double(forKey: "calorieGoal") == 0 ? 2000 : UserDefaults.standard.double(forKey: "calorieGoal")
+
     var dateFormatter: DateFormatter {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "MMM dd, yyyy"
@@ -80,6 +82,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 }
             }
+
             Button(action: {
                 isProfileOpen = true
             }) {
@@ -90,33 +93,31 @@ struct ContentView: View {
             .padding(.leading, 20)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        HStack {
-            TabView {
-                Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
-                    .tabItem {
-                        Image(systemName: "square.grid.3x3.middle.fill")
-                        Text("Dashboard")
-                    }
-                Log(selectedDate: $selectedDate)
-                    .tabItem {
-                        Image(systemName: "fork.knife.circle")
-                        Text("Food")
-                    }
-                ExerciseLog(selectedDate: $selectedDate)
-                    .tabItem {
-                        Image(systemName: "figure.strengthtraining.traditional")
-                        Text("Exercise")
-                    }
+        TabView {
+            Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
+                .tabItem {
+                    Image(systemName: "square.grid.3x3.middle.fill")
+                    Text("Dashboard")
+                }
+            Log(selectedDate: $selectedDate)
+                .tabItem {
+                    Image(systemName: "fork.knife.circle")
+                    Text("Food")
+                }
+            ExerciseLog(selectedDate: $selectedDate)
+                .tabItem {
+                    Image(systemName: "figure.strengthtraining.traditional")
+                    Text("Exercise")
+                }
 //                Plans()
 //                    .tabItem {
 //                        Image(systemName: "pencil.and.list.clipboard")
 //                        Text("Diet Plans")
 //                    }
-            }
         }
         .sheet(isPresented: $isProfileOpen) {
             NavigationStack {
-                Profiles()
+                Profiles(isDarkMode: $isDarkMode)
                     .toolbar {
                         ToolbarItem {
                             Button(action: {
@@ -128,6 +129,7 @@ struct ContentView: View {
                     }
             }
         }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
         .padding()
     }
 }
