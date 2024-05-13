@@ -15,7 +15,8 @@ struct JournalEntry: View {
     @State private var name: String = ""
     @State private var calories: Double = 0
     @State private var entryDate: Date = .init()
-
+    
+    
     private let calorieFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.zeroSymbol = ""

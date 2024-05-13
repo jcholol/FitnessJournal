@@ -24,7 +24,7 @@ struct HW2___StorageApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self])
+        .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self, UserGoals.self])
 //        .modelContainer(modelContainer)
     }
 }

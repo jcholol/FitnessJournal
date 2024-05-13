@@ -27,6 +27,8 @@
 		CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */; };
 		CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */; };
 		CDE0113E2BE3439E00252E1F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0113D2BE3439E00252E1F /* UserInfo.swift */; };
+		CDE018262BF1AD7000252E1F /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018252BF1AD7000252E1F /* Goals.swift */; };
+		CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018272BF1B17900252E1F /* UserGoals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
 		CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 		CDE0113D2BE3439E00252E1F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CDE018252BF1AD7000252E1F /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		CDE018272BF1B17900252E1F /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				CD0487F82BD5062800FCEA42 /* Plans.swift */,
 				CD0487FA2BD5063400FCEA42 /* Profiles.swift */,
 				CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */,
+				CDE018252BF1AD7000252E1F /* Goals.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CD04881F2BDCB53900FCEA42 /* FoodItem.swift */,
+				CDE018272BF1B17900252E1F /* UserGoals.swift */,
 				CD0488282BDDC11600FCEA42 /* Exercise.swift */,
 				CD0487EE2BD5055900FCEA42 /* Food.swift */,
 				CDE0113D2BE3439E00252E1F /* UserInfo.swift */,
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0487F32BD505FA00FCEA42 /* Log.swift in Sources */,
+				CDE018262BF1AD7000252E1F /* Goals.swift in Sources */,
 				CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */,
+				CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */,
 				CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */,
 				CD0487D72BD504C600FCEA42 /* ContentView.swift in Sources */,
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
