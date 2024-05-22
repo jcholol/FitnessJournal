@@ -29,6 +29,7 @@
 		CDE0113E2BE3439E00252E1F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0113D2BE3439E00252E1F /* UserInfo.swift */; };
 		CDE018262BF1AD7000252E1F /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018252BF1AD7000252E1F /* Goals.swift */; };
 		CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018272BF1B17900252E1F /* UserGoals.swift */; };
+		CDE0182A2BFCA8DB00252E1F /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018292BFCA8DB00252E1F /* Routines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		CDE0113D2BE3439E00252E1F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		CDE018252BF1AD7000252E1F /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		CDE018272BF1B17900252E1F /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
+		CDE018292BFCA8DB00252E1F /* Routines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CD04881F2BDCB53900FCEA42 /* FoodItem.swift */,
+				CDE018292BFCA8DB00252E1F /* Routines.swift */,
 				CDE018272BF1B17900252E1F /* UserGoals.swift */,
 				CD0488282BDDC11600FCEA42 /* Exercise.swift */,
 				CD0487EE2BD5055900FCEA42 /* Food.swift */,
@@ -240,6 +243,7 @@
 				CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */,
 				CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */,
 				CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */,
+				CDE0182A2BFCA8DB00252E1F /* Routines.swift in Sources */,
 				CD0487D72BD504C600FCEA42 /* ContentView.swift in Sources */,
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
 				CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */,

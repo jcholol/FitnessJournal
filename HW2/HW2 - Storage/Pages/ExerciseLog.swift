@@ -12,6 +12,7 @@ struct ExerciseLog: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
     @Binding var selectedDate: Date
+    @State private var isCreatingExercise: Bool = false
 
     @State private var showingJournal = false
     @State private var editLog: Exercise?
@@ -23,46 +24,75 @@ struct ExerciseLog: View {
 
     var body: some View {
         NavigationStack {
+            VStack {
+                Text("Quick Start")
+                    .font(.headline)
+                    .padding(.top, 20)
+
+                Button(action: {
+                    isCreatingExercise = true
+                }) {
+                    Text("Start Empty Workout")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+            }
+            .padding(.horizontal)
+
+            Text("Routines")
+                .font(.headline)
+                .padding(.top, 20)
+
+            HStack {
+                Button(action: {
+                    // Action for creating a new routine
+                }) {
+                    HStack {
+                        Image(systemName: "plus.square")
+                        Text("New Routine")
+                    }
+                    .foregroundColor(.blue)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(UIColor.systemGray6))
+                    .cornerRadius(8)
+                }
+
+                Button(action: {
+                    // Action for exploring routines
+                }) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                        Text("Explore")
+                    }
+                    .foregroundColor(.blue)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(UIColor.systemGray6))
+                    .cornerRadius(8)
+                }
+            }
+            .padding(.horizontal)
+
+            Spacer()
+
             List {
-                ForEach(filterExercise) { exercise in
-                    ExerciseRow(exercise: exercise)
-                        .onTapGesture {
-                            editLog = exercise
-                        }
-                }
-                .onDelete { exerciseIndex in
-                    for index in exerciseIndex {
-                        context.delete(filterExercise[index])
-                    }
+                Section(header: Text("My Routines (3)")) {
+                    // List of routines
+                    // Store routine into context and query instead of this
+                    Text("Routine 1")
+                    Text("Routine 2")
+                    Text("Routine 3")
                 }
             }
-            .navigationTitle("Exercise Journal")
-            .navigationBarTitleDisplayMode(.large)
-            .sheet(isPresented: $showingJournal) {
+        }
+        .navigationBarTitle("Workout")
+        .sheet(isPresented: $isCreatingExercise) {
+            NavigationStack {
                 ExerciseJournal(selectedDate: $selectedDate)
-            }
-            .sheet(item: $editLog) { exercise in
-                UpdateExerciseJournal(exercise: exercise)
-            }
-            .toolbar {
-                if !filterExercise.isEmpty {
-                    Button("Add Activity", systemImage: "plus") {
-                        showingJournal = true
-                    }
-                }
-            }
-            .overlay {
-                if filterExercise.isEmpty {
-                    ContentUnavailableView(label: {
-                        Label("No activity logged", systemImage: "figure.flexibility")
-                    }, description: {
-                        Text("Begin journaling your exercises!")
-                    }, actions: {
-                        Button("Add Activity") {
-                            showingJournal = true
-                        }
-                    })
-                }
             }
         }
     }

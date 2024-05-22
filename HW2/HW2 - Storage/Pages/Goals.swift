@@ -5,14 +5,12 @@
 //  Created by Yunho Cho on 5/12/24.
 //
 
-import SwiftData
 import SwiftUI
 
 struct Goals: View {
+    @State private var goals = UserGoals(startingWeight: 190, currentWeight: 190, goalWeight: 160, weeklyGoal: "Lose 2 lbs per week", activityLevel: "Not Very Active", workoutsPerWeek: 0, minutesPerWorkout: 0)
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
-
-    @Query var goals: [Goals]
 
     var body: some View {
         NavigationView {
@@ -69,20 +67,6 @@ struct Goals: View {
                 }
             }
             .navigationTitle("Goals")
-            .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    Button("Save") {
-                        let goal = UserGoals(startingWeight: 190, currentWeight: 190, goalWeight: 160, weeklyGoal: "Lose 2 lbs per week", activityLevel: "Not Very Active", workoutsPerWeek: 0, minutesPerWorkout: 0)
-                        context.insert(food)
-                        dismiss()
-                    }
-                }
-                ToolbarItemGroup(placement: .topBarLeading) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
-                }
-            }
         }
     }
 }

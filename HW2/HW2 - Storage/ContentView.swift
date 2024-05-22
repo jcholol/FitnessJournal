@@ -96,18 +96,15 @@ struct ContentView: View {
         TabView {
             Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
                 .tabItem {
-                    Image(systemName: "square.grid.3x3.middle.fill")
-                    Text("Dashboard")
+                    Label("Dashboard", systemImage: "square.grid.3x3.middle.fill")
                 }
             Log(selectedDate: $selectedDate)
                 .tabItem {
-                    Image(systemName: "fork.knife.circle")
-                    Text("Food")
+                    Label("Food", systemImage: "fork.knife.circle")
                 }
             ExerciseLog(selectedDate: $selectedDate)
                 .tabItem {
-                    Image(systemName: "figure.strengthtraining.traditional")
-                    Text("Exercise")
+                    Label("Exercise", systemImage: "figure.strengthtraining.traditional")
                 }
 //                Plans()
 //                    .tabItem {

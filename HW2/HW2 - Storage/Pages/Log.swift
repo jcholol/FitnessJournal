@@ -23,50 +23,42 @@ struct Log: View {
     }
 
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(filterFoodItem) { food in
-                    FoodRow(food: food)
-                        .onTapGesture {
-                            editLog = food
-                        }
-                }
-                .onDelete { foodIndex in
-                    for index in foodIndex {
-                        context.delete(filterFoodItem[index])
+        List {
+            ForEach(filterFoodItem) { food in
+                FoodRow(food: food)
+                    .onTapGesture {
+                        editLog = food
                     }
-                }
             }
-            .navigationTitle("Food Journal")
-            .navigationBarTitleDisplayMode(.large)
-            .sheet(isPresented: $showingJournal) { JournalEntry(selectedDate: $selectedDate) }
-            .sheet(item: $editLog) { food in
-                UpdateJournalEntry(food: food)
-            }
-            .toolbar {
-                if !filterFoodItem.isEmpty {
-                    Button("Add Food", systemImage: "plus") {
-                        showingJournal = true
-                    }
-                }
-            }
-            .overlay {
-                if filterFoodItem.isEmpty {
-                    ContentUnavailableView(label: {
-                        Label("No food logged", systemImage: "rectangle.and.pencil.and.ellipsis")
-                    }, description: {
-                        Text("Begin journaling your food intake")
-                    }, actions: {
-                        Button("Add Food") {
-                            showingJournal = true
-                        }
-                    })
+            .onDelete { foodIndex in
+                for index in foodIndex {
+                    context.delete(filterFoodItem[index])
                 }
             }
         }
+        .sheet(isPresented: $showingJournal) { JournalEntry(selectedDate: $selectedDate) }
+        .sheet(item: $editLog) { food in
+            UpdateJournalEntry(food: food)
+        }
+        .toolbar {
+            if !filterFoodItem.isEmpty {
+                Button("Add Food", systemImage: "plus") {
+                    showingJournal = true
+                }
+            }
+        }
+        .overlay {
+            if filterFoodItem.isEmpty {
+                ContentUnavailableView(label: {
+                    Label("No food logged", systemImage: "rectangle.and.pencil.and.ellipsis")
+                }, description: {
+                    Text("Begin journaling your food intake")
+                }, actions: {
+                    Button("Add Food") {
+                        showingJournal = true
+                    }
+                })
+            }
+        }
     }
-}
-
-#Preview {
-    ContentView()
 }

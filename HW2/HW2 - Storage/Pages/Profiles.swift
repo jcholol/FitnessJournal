@@ -11,20 +11,18 @@ struct Profiles: View {
     @Binding var isDarkMode: Bool
 
     var body: some View {
-        NavigationView {
-            Form {
-                ProfileHeader()
+        Form {
+            ProfileHeader()
 
-                Section(header: Text("App Appearance")) {
-                    AppAppearanceToggle(isDarkMode: $isDarkMode)
-                }
-
-                Section(header: Text("Fitness Information")) {
-                    GoalsNavigationLink()
-                }
+            Section(header: Text("App Appearance")) {
+                AppAppearanceToggle(isDarkMode: $isDarkMode)
             }
-            .navigationTitle("Account Settings")
+
+            Section(header: Text("Fitness Information")) {
+                GoalsNavigationLink()
+            }
         }
+        .navigationTitle("Account Settings")
         .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
