@@ -7,24 +7,26 @@
 
 import SwiftData
 import SwiftUI
+import FirebaseCore
 
 @main
 struct HW2___StorageApp: App {
-//    let modelContainer: ModelContainer
-//
-//    init() {
-//        do {
-//            modelContainer = try ModelContainer(for: FoodItem.self, Exercise.self, UserInfo.self)
-//        } catch {
-//            fatalError("Could not initialize ModelContainer")
-//        }
-//    }
-
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var userAuth = UserAuth()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userAuth)
         }
         .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self, UserGoals.self])
-//        .modelContainer(modelContainer)
+        //        .modelContainer(modelContainer)
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        return true
     }
 }

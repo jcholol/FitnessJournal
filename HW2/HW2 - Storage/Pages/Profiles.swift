@@ -9,10 +9,12 @@ import SwiftUI
 
 struct Profiles: View {
     @Binding var isDarkMode: Bool
+    @StateObject private var viewModel = UserProfile()
+    @EnvironmentObject var userAuth: UserAuth
 
     var body: some View {
         Form {
-            ProfileHeader()
+            ProfileHeader(email: viewModel.email, name: viewModel.name)
 
             Section(header: Text("App Appearance")) {
                 AppAppearanceToggle(isDarkMode: $isDarkMode)
@@ -21,6 +23,16 @@ struct Profiles: View {
             Section(header: Text("Fitness Information")) {
                 GoalsNavigationLink()
             }
+            
+            Section {
+                Button(action: {
+                    userAuth.signOut()
+                }) {
+                    Text("Sign Out")
+                        .foregroundColor(.red)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+            }
         }
         .navigationTitle("Account Settings")
         .preferredColorScheme(isDarkMode ? .dark : .light)
@@ -28,6 +40,9 @@ struct Profiles: View {
 }
 
 struct ProfileHeader: View {
+    var email: String
+    var name: String
+
     var body: some View {
         HStack {
             Image(systemName: "person.crop.circle")
@@ -35,8 +50,8 @@ struct ProfileHeader: View {
                 .frame(width: 50, height: 50)
                 .foregroundColor(.blue)
             VStack(alignment: .leading) {
-                Text("User").font(.title2)
-                Text("User Email")
+                Text(name).font(.title2)
+                Text(email)
             }
         }
     }

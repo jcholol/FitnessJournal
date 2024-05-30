@@ -11,12 +11,12 @@ import SwiftData
 @Model
 class Exercise {
     var name: String
-    var duration: Int
-    var date: Date
-
-    init(name: String, duration: Int, date: Date) {
+    var previousWeight: Double
+    var previousRep: Int
+    
+    init(name: String, previousWeight: Double, previousRep: Int) {
         self.name = name
-        self.duration = duration
-        self.date = date
+        self.previousWeight = previousWeight
+        self.previousRep = previousRep
     }
 }

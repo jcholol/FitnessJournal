@@ -11,17 +11,17 @@ import SwiftUI
 struct Log: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
-
+    
     @Binding var selectedDate: Date
     @State private var showingJournal = false
     @State private var editLog: FoodItem?
-
+    
     @Query var foods: [FoodItem]
-
+    
     var filterFoodItem: [FoodItem] {
         return foods.filter { Calendar.current.compare($0.date, to: selectedDate, toGranularity: .day) == .orderedSame }
     }
-
+    
     var body: some View {
         List {
             ForEach(filterFoodItem) { food in
