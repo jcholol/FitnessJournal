@@ -1,10 +1,3 @@
-//
-//  Login.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 5/25/24.
-//
-
 import SwiftUI
 import UIKit
 import FirebaseAuth

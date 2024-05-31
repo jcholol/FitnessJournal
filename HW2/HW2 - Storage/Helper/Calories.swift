@@ -1,10 +1,3 @@
-//
-//  Calories.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/19/24.
-//
-
 import SwiftUI
 
 struct Calories: View {

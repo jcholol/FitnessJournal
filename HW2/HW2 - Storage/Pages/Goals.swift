@@ -1,10 +1,3 @@
-//
-//  Goals.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 5/12/24.
-//
-
 import SwiftUI
 
 struct Goals: View {

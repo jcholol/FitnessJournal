@@ -1,10 +1,3 @@
-//
-//  Food.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/20/24.
-//
-
 import Foundation
 import SwiftUI
 

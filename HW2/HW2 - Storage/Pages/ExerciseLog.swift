@@ -1,8 +1,3 @@
-//
-//  ExerciseLog.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 4/27/24.
 // Workaround for date selection https://stackoverflow.com/questions/76444745/swiftdata-predicate-do-not-work-with-date
 
 import SwiftData

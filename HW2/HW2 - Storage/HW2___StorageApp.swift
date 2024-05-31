@@ -1,10 +1,3 @@
-//
-//  HelloWorldApp.swift
-//  HelloWorld
-//
-//  Created by Yunho Cho on 4/4/24.
-//
-
 import SwiftData
 import SwiftUI
 import FirebaseCore

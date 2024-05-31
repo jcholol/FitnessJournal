@@ -1,10 +1,3 @@
-//
-//  Log.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/7/24.
-//
-
 import SwiftData
 import SwiftUI
 

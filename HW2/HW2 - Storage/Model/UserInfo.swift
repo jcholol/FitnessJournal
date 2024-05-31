@@ -1,10 +1,3 @@
-//
-//  UserInfo.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 5/1/24.
-//
-
 import Foundation
 import SwiftData
 

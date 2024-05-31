@@ -1,10 +1,3 @@
-//
-//  Profiles.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/7/24.
-//
-
 import SwiftUI
 
 struct Profiles: View {

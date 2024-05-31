@@ -1,10 +1,3 @@
-//
-//  FoodItem.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 4/26/24.
-//
-
 import Foundation
 import SwiftData
 

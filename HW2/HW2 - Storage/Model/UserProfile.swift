@@ -1,11 +1,3 @@
-//
-//  UserProfile.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 5/26/24.
-//
-
-
 import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore

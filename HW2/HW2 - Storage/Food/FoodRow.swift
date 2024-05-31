@@ -1,10 +1,3 @@
-//
-//  FoodRow.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 4/27/24.
-//
-
 import SwiftUI
 
 struct FoodRow: View {

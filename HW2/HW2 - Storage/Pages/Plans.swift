@@ -1,10 +1,3 @@
-//
-//  Plans.swift
-//  HelloWorld
-//
-//  Created by Yunho Cho on 4/7/24.
-//
-
 import SwiftUI
 
 struct Plans: View {
