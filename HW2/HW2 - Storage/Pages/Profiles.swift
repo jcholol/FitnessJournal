@@ -20,7 +20,7 @@ struct Profiles: View {
                 }
 
                 Section(header: Text("Fitness Information")) {
-                    GoalsNavigationLink()
+//                    GoalsNavigationLink()
                 }
             }
             .navigationTitle("Account Settings")
@@ -56,14 +56,14 @@ struct AppAppearanceToggle: View {
     }
 }
 
-struct GoalsNavigationLink: View {
-    var body: some View {
-        NavigationLink(destination: Goals()) {
-            Settings(iconColor: .red, iconName: "target")
-            Text("Goals")
-        }
-    }
-}
+//struct GoalsNavigationLink: View {
+//    var body: some View {
+////        NavigationLink(destination: Goals()) {
+////            Settings(iconColor: .red, iconName: "target")
+////            Text("Goals")
+////        }
+//    }
+//}
 
 struct Settings: View {
     let iconColor: Color
