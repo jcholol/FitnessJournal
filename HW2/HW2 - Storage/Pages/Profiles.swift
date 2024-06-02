@@ -3,6 +3,7 @@ import SwiftUI
 struct Profiles: View {
     @Binding var isDarkMode: Bool
     @Binding var calorieGoal: Double
+    @Binding var stepGoal: Double
 
     var body: some View {
         NavigationView {
@@ -14,7 +15,7 @@ struct Profiles: View {
                 }
 
                 Section(header: Text("Fitness Information")) {
-                    GoalsNavigationLink(calorieGoal: $calorieGoal)
+                    GoalsNavigationLink(calorieGoal: $calorieGoal, stepGoal: $stepGoal)
                 }
             }
             .navigationTitle("Account Settings")
@@ -52,9 +53,10 @@ struct AppAppearanceToggle: View {
 
 struct GoalsNavigationLink: View {
     @Binding var calorieGoal: Double
+    @Binding var stepGoal: Double
 
     var body: some View {
-        NavigationLink(destination: GoalsView(calorieGoal: $calorieGoal).environmentObject(GoalsViewModel())) {
+        NavigationLink(destination: GoalsView(calorieGoal: $calorieGoal, stepGoal: $stepGoal).environmentObject(GoalsViewModel())) {
             HStack {
                 Settings(iconColor: .red, iconName: "target")
                 Text("Goals")
@@ -90,7 +92,7 @@ struct GoalsView: View {
     @EnvironmentObject var viewModel: GoalsViewModel
     @Environment(\.dismiss) private var dismiss
     @Binding var calorieGoal: Double
-    @State private var stepGoal: String = ""
+    @Binding var stepGoal: Double
 
     var body: some View {
         VStack {
@@ -98,14 +100,11 @@ struct GoalsView: View {
                 Section(header: Text("Set Goals")) {
                     TextField("Calorie Goal", value: $calorieGoal, format: .number)
                         .keyboardType(.numberPad)
-                    TextField("Step Goal", text: $stepGoal)
+                    TextField("Step Goal", value: $stepGoal, format: .number)
                         .keyboardType(.numberPad)
                     Button(action: {
-                        if let stepGoalValue = Double(stepGoal) {
-                            viewModel.setGoals(calorieGoal: calorieGoal, stepGoal: stepGoalValue)
-                            stepGoal = ""
-                            dismiss()
-                        }
+                        viewModel.setGoals(calorieGoal: calorieGoal, stepGoal: stepGoal)
+                        dismiss()
                     }) {
                         Text("Save Goals")
                     }
@@ -114,7 +113,7 @@ struct GoalsView: View {
         }
         .onAppear {
             calorieGoal = viewModel.goals.calorieGoal
-            stepGoal = String(viewModel.goals.stepGoal)
+            stepGoal = viewModel.goals.stepGoal
         }
         .navigationTitle("Goals")
     }

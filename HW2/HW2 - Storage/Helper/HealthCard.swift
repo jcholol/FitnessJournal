@@ -17,6 +17,7 @@ struct Activity {
 
 struct HealthCard: View {
     @State var activity: Activity
+    @Binding var stepGoal: Double
     
     var body: some View {
         ZStack {
@@ -29,7 +30,8 @@ struct HealthCard: View {
                         Text(activity.title)
                             .font(.system(size: 16))
                         
-                        Text(activity.subtitle)
+                        Text("Goal: \(stepGoal, specifier: "%.0f")")
+                            .font(.title2)
                             .font(.system(size: 12))
                             .foregroundColor(.gray)
                     }
@@ -46,3 +48,4 @@ struct HealthCard: View {
         }
     }
 }
+

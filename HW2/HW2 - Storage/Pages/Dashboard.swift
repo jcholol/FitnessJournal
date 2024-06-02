@@ -6,6 +6,7 @@ struct Dashboard: View {
     
     @Binding var selectedDate: Date
     @Binding var calorieGoal: Double
+    @Binding var stepGoal: Double
     
     @State private var filteredFoods = []
     @State private var filteredExercise = []
@@ -65,7 +66,7 @@ struct Dashboard: View {
                     VStack{
                         LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
                             ForEach(manager.activities.sorted(by: { $0.value.id < $1.value.id }), id: \.key) { item in
-                                HealthCard(activity: item.value)
+                                HealthCard(activity: item.value, stepGoal: $stepGoal)
                             }
                         }
                         .padding(.horizontal, 25)

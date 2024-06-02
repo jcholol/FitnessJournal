@@ -14,6 +14,9 @@ struct ContentView: View {
     // Load and save calorieGoal using UserDefaults
     @State private var calorieGoal: Double = UserDefaults.standard.double(forKey: "calorieGoal") == 0 ? 2000 : UserDefaults.standard.double(forKey: "calorieGoal")
 
+    // Load and save stepGoal using UserDefaults
+    @State private var stepGoal: Double = UserDefaults.standard.double(forKey: "stepGoal") == 0 ? 10000 : UserDefaults.standard.double(forKey: "stepGoal")
+
     var dateFormatter: DateFormatter {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "MMM dd, yyyy"
@@ -87,7 +90,7 @@ struct ContentView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         TabView {
-            Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
+            Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal, stepGoal: $stepGoal)
                 .tabItem {
                     Image(systemName: "square.grid.3x3.middle.fill")
                     Text("Dashboard")
@@ -106,13 +109,14 @@ struct ContentView: View {
         }
         .sheet(isPresented: $isProfileOpen) {
             NavigationStack {
-                Profiles(isDarkMode: $isDarkMode, calorieGoal: $calorieGoal)
+                Profiles(isDarkMode: $isDarkMode, calorieGoal: $calorieGoal, stepGoal: $stepGoal)
                     .toolbar {
                         ToolbarItem {
                             Button(action: {
                                 isProfileOpen = false
-                                // Save the updated calorieGoal to UserDefaults
+                                // Save the updated goals to UserDefaults
                                 UserDefaults.standard.set(calorieGoal, forKey: "calorieGoal")
+                                UserDefaults.standard.set(stepGoal, forKey: "stepGoal")
                             }) {
                                 Text("Done")
                             }

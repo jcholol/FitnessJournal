@@ -25,17 +25,10 @@ struct Log: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(filterFoodItem) { food in
-                    FoodRow(food: food)
-                        .onTapGesture {
-                            editLog = food
-                        }
-                }
-                .onDelete { foodIndex in
-                    for index in foodIndex {
-                        context.delete(filterFoodItem[index])
-                    }
-                }
+                foodSection(title: "Breakfast", items: filterFoodItem.filter { isInTimeRange($0.date, start: 8, end: 11) })
+                foodSection(title: "Lunch", items: filterFoodItem.filter { isInTimeRange($0.date, start: 12, end: 15) })
+                foodSection(title: "Dinner", items: filterFoodItem.filter { isInTimeRange($0.date, start: 18, end: 21) })
+                foodSection(title: "Snack", items: filterFoodItem.filter { isInSnackTime($0.date) })
             }
             .navigationTitle("Food Journal")
             .navigationBarTitleDisplayMode(.large)
@@ -45,8 +38,10 @@ struct Log: View {
             }
             .toolbar {
                 if !filterFoodItem.isEmpty {
-                    Button("Add Food", systemImage: "plus") {
+                    Button {
                         showingJournal = true
+                    } label: {
+                        Label("Add Food", systemImage: "plus")
                     }
                 }
             }
@@ -64,5 +59,31 @@ struct Log: View {
                 }
             }
         }
+    }
+
+    private func foodSection(title: String, items: [FoodItem]) -> some View {
+        Section(header: Text(title)) {
+            ForEach(items) { food in
+                FoodRow(food: food)
+                    .onTapGesture {
+                        editLog = food
+                    }
+            }
+            .onDelete { foodIndex in
+                for index in foodIndex {
+                    context.delete(items[index])
+                }
+            }
+        }
+    }
+
+    private func isInTimeRange(_ date: Date, start: Int, end: Int) -> Bool {
+        let hour = Calendar.current.component(.hour, from: date)
+        return hour >= start && hour < end
+    }
+
+    private func isInSnackTime(_ date: Date) -> Bool {
+        let hour = Calendar.current.component(.hour, from: date)
+        return (hour >= 0 && hour < 8) || (hour >= 11 && hour < 12) || (hour >= 15 && hour < 18) || (hour >= 21 && hour <= 23)
     }
 }
