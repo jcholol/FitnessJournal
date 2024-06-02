@@ -1,13 +1,15 @@
 import SwiftData
 import SwiftUI
-import FirebaseAuth
 
 struct ContentView: View {
     @State private var isLoggedIn = false
-    @EnvironmentObject var userAuth: UserAuth
+    
     @AppStorage("isDarkMode") var isDarkMode: Bool = UserDefaults.standard.bool(forKey: "isDarkMode")
     
     @Environment(\.modelContext) var context
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: User.entity(), sortDescriptors: [])
+    private var users: FetchedResults<User>
     
     @State private var isProfileOpen: Bool = false
     @State var selectedDate = Date.now
@@ -27,9 +29,7 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if !isLoggedIn {
-                Login()
-            } else {
+            if isLoggedIn {
                 ZStack {
                     VStack {
                         HStack {
@@ -81,76 +81,65 @@ struct ContentView: View {
                             }
                             .ignoresSafeArea()
                         }
+                        
+                        
+                        Button(action: {
+                            isProfileOpen = true
+                        }) {
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                        }
+                        .padding(.leading, 20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    
-                    Button(action: {
-                        isProfileOpen = true
-                    }) {
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .frame(width: 30, height: 30)
+                    TabView {
+                        Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
+                            .tabItem {
+                                Label("Dashboard", systemImage: "square.grid.3x3.middle.fill")
+                            }
+                        Log(selectedDate: $selectedDate)
+                            .tabItem {
+                                Label("Food", systemImage: "fork.knife.circle")
+                            }
+                        ExerciseLog(selectedDate: $selectedDate)
+                            .tabItem {
+                                Label("Exercise", systemImage: "figure.strengthtraining.traditional")
+                            }
+                        //                Plans()
+                        //                    .tabItem {
+                        //                        Image(systemName: "pencil.and.list.clipboard")
+                        //                        Text("Diet Plans")
+                        //                    }
                     }
-                    .padding(.leading, 20)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                TabView {
-                    Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
-                        .tabItem {
-                            Label("Dashboard", systemImage: "square.grid.3x3.middle.fill")
-                        }
-                    Log(selectedDate: $selectedDate)
-                        .tabItem {
-                            Label("Food", systemImage: "fork.knife.circle")
-                        }
-                    ExerciseLog(selectedDate: $selectedDate)
-                        .tabItem {
-                            Label("Exercise", systemImage: "figure.strengthtraining.traditional")
-                        }
-                    //                Plans()
-                    //                    .tabItem {
-                    //                        Image(systemName: "pencil.and.list.clipboard")
-                    //                        Text("Diet Plans")
-                    //                    }
-                }
-                .sheet(isPresented: $isProfileOpen) {
-                    NavigationStack {
-                        Profiles(isDarkMode: $isDarkMode)
-                            .toolbar {
-                                ToolbarItem {
-                                    Button(action: {
-                                        isProfileOpen = false
-                                    }) {
-                                        Text("Done")
+                    .sheet(isPresented: $isProfileOpen) {
+                        NavigationStack {
+                            Profiles(isDarkMode: $isDarkMode)
+                                .toolbar {
+                                    ToolbarItem {
+                                        Button(action: {
+                                            isProfileOpen = false
+                                        }) {
+                                            Text("Done")
+                                        }
                                     }
                                 }
-                            }
+                        }
                     }
-                }
-                .preferredColorScheme(isDarkMode ? .dark : .light)
-                .padding()
-            }
-        }
-        .onAppear {
-            Auth.auth().addStateDidChangeListener { auth, user in
-                if user != nil {
-                    isLoggedIn = true
-                } else {
-                    isLoggedIn = false
+                    .preferredColorScheme(isDarkMode ? .dark : .light)
+                    .padding()
                 }
             }
         }
-    }
-}
-
-struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
-    let content: () -> T
-    func makeUIViewController(context: Context) -> UIHostingController<T> {
-        UIHostingController(rootView: content())
     }
     
-    func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
-}
-
-#Preview {
-    ContentView()
+    struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
+        let content: () -> T
+        func makeUIViewController(context: Context) -> UIHostingController<T> {
+            UIHostingController(rootView: content())
+        }
+        
+        func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
+    }
+    
 }

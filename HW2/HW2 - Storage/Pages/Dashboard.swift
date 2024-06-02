@@ -81,6 +81,3 @@ extension GroupBoxStyle where Self == CalorieGroupBoxStyle {
     static var calorie: CalorieGroupBoxStyle { .init() }
 }
 
-#Preview {
-    ContentView()
-}

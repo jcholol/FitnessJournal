@@ -1,0 +1,19 @@
+platform :ios, '13.0'
+
+target 'HW2___Storage' do
+  use_frameworks!
+
+  # Pods for HW2___Storage
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+
+  target 'HW2___StorageTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HW2___StorageUITests' do
+    # Pods for testing
+  end
+end
