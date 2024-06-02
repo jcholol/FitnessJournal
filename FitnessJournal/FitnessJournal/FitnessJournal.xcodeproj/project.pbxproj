@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDE0272A2C0D170C00252E1F /* FitnessJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027292C0D170C00252E1F /* FitnessJournalApp.swift */; };
+		CDE0272C2C0D170C00252E1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0272B2C0D170C00252E1F /* ContentView.swift */; };
+		CDE0272E2C0D170D00252E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE0272D2C0D170D00252E1F /* Assets.xcassets */; };
+		CDE027312C0D170D00252E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE027302C0D170D00252E1F /* Preview Assets.xcassets */; };
+		CDE027392C0D175500252E1F /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027382C0D175500252E1F /* Calories.swift */; };
+		CDE0273C2C0D177900252E1F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0273B2C0D177900252E1F /* Dashboard.swift */; };
+		CDE0273E2C0D178400252E1F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0273D2C0D178400252E1F /* Log.swift */; };
+		CDE027402C0D179100252E1F /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0273F2C0D179100252E1F /* Profiles.swift */; };
+		CDE027422C0D17A500252E1F /* ExerciseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027412C0D17A500252E1F /* ExerciseLog.swift */; };
+		CDE027472C0D17CC00252E1F /* UpdateExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027462C0D17CC00252E1F /* UpdateExerciseJournal.swift */; };
+		CDE027492C0D180800252E1F /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027482C0D180800252E1F /* ExerciseRow.swift */; };
+		CDE0274B2C0D181F00252E1F /* ExerciseJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0274A2C0D181F00252E1F /* ExerciseJournal.swift */; };
+		CDE0274E2C0D18BE00252E1F /* UpdateJournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0274D2C0D18BE00252E1F /* UpdateJournalEntry.swift */; };
+		CDE027502C0D18C900252E1F /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0274F2C0D18C900252E1F /* FoodRow.swift */; };
+		CDE027522C0D18D500252E1F /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027512C0D18D500252E1F /* JournalEntry.swift */; };
+		CDE027552C0D193A00252E1F /* Fooditem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027542C0D193A00252E1F /* Fooditem.swift */; };
+		CDE027572C0D194D00252E1F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027562C0D194D00252E1F /* Exercise.swift */; };
+		CDE027592C0D195A00252E1F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027582C0D195A00252E1F /* UserInfo.swift */; };
+		CDE0275B2C0D19F200252E1F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0275A2C0D19F200252E1F /* HealthCard.swift */; };
+		CDE0275D2C0D1A0100252E1F /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0275C2C0D1A0100252E1F /* HealthManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDE027262C0D170C00252E1F /* FitnessJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE027292C0D170C00252E1F /* FitnessJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessJournalApp.swift; sourceTree = "<group>"; };
+		CDE0272B2C0D170C00252E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDE0272D2C0D170D00252E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDE027302C0D170D00252E1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDE027382C0D175500252E1F /* Calories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
+		CDE0273B2C0D177900252E1F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		CDE0273D2C0D178400252E1F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		CDE0273F2C0D179100252E1F /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		CDE027412C0D17A500252E1F /* ExerciseLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLog.swift; sourceTree = "<group>"; };
+		CDE027462C0D17CC00252E1F /* UpdateExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseJournal.swift; sourceTree = "<group>"; };
+		CDE027482C0D180800252E1F /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
+		CDE0274A2C0D181F00252E1F /* ExerciseJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseJournal.swift; sourceTree = "<group>"; };
+		CDE0274D2C0D18BE00252E1F /* UpdateJournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJournalEntry.swift; sourceTree = "<group>"; };
+		CDE0274F2C0D18C900252E1F /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		CDE027512C0D18D500252E1F /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		CDE027542C0D193A00252E1F /* Fooditem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fooditem.swift; sourceTree = "<group>"; };
+		CDE027562C0D194D00252E1F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		CDE027582C0D195A00252E1F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CDE0275A2C0D19F200252E1F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
+		CDE0275C2C0D1A0100252E1F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		CDE0275E2C0D1AD900252E1F /* FitnessJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessJournal.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDE027232C0D170C00252E1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDE0271D2C0D170C00252E1F = {
+			isa = PBXGroup;
+			children = (
+				CDE027282C0D170C00252E1F /* FitnessJournal */,
+				CDE027272C0D170C00252E1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDE027272C0D170C00252E1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDE027262C0D170C00252E1F /* FitnessJournal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDE027282C0D170C00252E1F /* FitnessJournal */ = {
+			isa = PBXGroup;
+			children = (
+				CDE0275E2C0D1AD900252E1F /* FitnessJournal.entitlements */,
+				CDE027292C0D170C00252E1F /* FitnessJournalApp.swift */,
+				CDE0272B2C0D170C00252E1F /* ContentView.swift */,
+				CDE027372C0D174B00252E1F /* Helper */,
+				CDE0273A2C0D176400252E1F /* Pages */,
+				CDE027452C0D17BD00252E1F /* Exercise */,
+				CDE0274C2C0D18AD00252E1F /* Food */,
+				CDE027532C0D18E300252E1F /* Model */,
+				CDE0272D2C0D170D00252E1F /* Assets.xcassets */,
+				CDE0272F2C0D170D00252E1F /* Preview Content */,
+			);
+			path = FitnessJournal;
+			sourceTree = "<group>";
+		};
+		CDE0272F2C0D170D00252E1F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CDE027302C0D170D00252E1F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDE027372C0D174B00252E1F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CDE027382C0D175500252E1F /* Calories.swift */,
+				CDE0275A2C0D19F200252E1F /* HealthCard.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CDE0273A2C0D176400252E1F /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CDE0273B2C0D177900252E1F /* Dashboard.swift */,
+				CDE0273D2C0D178400252E1F /* Log.swift */,
+				CDE027412C0D17A500252E1F /* ExerciseLog.swift */,
+				CDE0273F2C0D179100252E1F /* Profiles.swift */,
+				CDE0275C2C0D1A0100252E1F /* HealthManager.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		CDE027452C0D17BD00252E1F /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				CDE027462C0D17CC00252E1F /* UpdateExerciseJournal.swift */,
+				CDE027482C0D180800252E1F /* ExerciseRow.swift */,
+				CDE0274A2C0D181F00252E1F /* ExerciseJournal.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		CDE0274C2C0D18AD00252E1F /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				CDE0274D2C0D18BE00252E1F /* UpdateJournalEntry.swift */,
+				CDE0274F2C0D18C900252E1F /* FoodRow.swift */,
+				CDE027512C0D18D500252E1F /* JournalEntry.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		CDE027532C0D18E300252E1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDE027542C0D193A00252E1F /* Fooditem.swift */,
+				CDE027562C0D194D00252E1F /* Exercise.swift */,
+				CDE027582C0D195A00252E1F /* UserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDE027252C0D170C00252E1F /* FitnessJournal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE027342C0D170D00252E1F /* Build configuration list for PBXNativeTarget "FitnessJournal" */;
+			buildPhases = (
+				CDE027222C0D170C00252E1F /* Sources */,
+				CDE027232C0D170C00252E1F /* Frameworks */,
+				CDE027242C0D170C00252E1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitnessJournal;
+			productName = FitnessJournal;
+			productReference = CDE027262C0D170C00252E1F /* FitnessJournal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDE0271E2C0D170C00252E1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					CDE027252C0D170C00252E1F = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = CDE027212C0D170C00252E1F /* Build configuration list for PBXProject "FitnessJournal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDE0271D2C0D170C00252E1F;
+			productRefGroup = CDE027272C0D170C00252E1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDE027252C0D170C00252E1F /* FitnessJournal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDE027242C0D170C00252E1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE027312C0D170D00252E1F /* Preview Assets.xcassets in Resources */,
+				CDE0272E2C0D170D00252E1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDE027222C0D170C00252E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE0272C2C0D170C00252E1F /* ContentView.swift in Sources */,
+				CDE0275D2C0D1A0100252E1F /* HealthManager.swift in Sources */,
+				CDE027392C0D175500252E1F /* Calories.swift in Sources */,
+				CDE0273E2C0D178400252E1F /* Log.swift in Sources */,
+				CDE027402C0D179100252E1F /* Profiles.swift in Sources */,
+				CDE027592C0D195A00252E1F /* UserInfo.swift in Sources */,
+				CDE027502C0D18C900252E1F /* FoodRow.swift in Sources */,
+				CDE0275B2C0D19F200252E1F /* HealthCard.swift in Sources */,
+				CDE027572C0D194D00252E1F /* Exercise.swift in Sources */,
+				CDE027492C0D180800252E1F /* ExerciseRow.swift in Sources */,
+				CDE0273C2C0D177900252E1F /* Dashboard.swift in Sources */,
+				CDE0274E2C0D18BE00252E1F /* UpdateJournalEntry.swift in Sources */,
+				CDE027552C0D193A00252E1F /* Fooditem.swift in Sources */,
+				CDE0272A2C0D170C00252E1F /* FitnessJournalApp.swift in Sources */,
+				CDE0274B2C0D181F00252E1F /* ExerciseJournal.swift in Sources */,
+				CDE027472C0D17CC00252E1F /* UpdateExerciseJournal.swift in Sources */,
+				CDE027522C0D18D500252E1F /* JournalEntry.swift in Sources */,
+				CDE027422C0D17A500252E1F /* ExerciseLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CDE027322C0D170D00252E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDE027332C0D170D00252E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDE027352C0D170D00252E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessJournal/FitnessJournal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FitnessJournal/Preview Content\"";
+				DEVELOPMENT_TEAM = 2597L59XWC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health information on the app";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jcholol.FitnessJournal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDE027362C0D170D00252E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessJournal/FitnessJournal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FitnessJournal/Preview Content\"";
+				DEVELOPMENT_TEAM = 2597L59XWC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health information on the app";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jcholol.FitnessJournal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDE027212C0D170C00252E1F /* Build configuration list for PBXProject "FitnessJournal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE027322C0D170D00252E1F /* Debug */,
+				CDE027332C0D170D00252E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE027342C0D170D00252E1F /* Build configuration list for PBXNativeTarget "FitnessJournal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE027352C0D170D00252E1F /* Debug */,
+				CDE027362C0D170D00252E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDE0271E2C0D170C00252E1F /* Project object */;
+}
