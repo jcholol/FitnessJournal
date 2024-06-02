@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Calories: View {
     @State var width: CGFloat = 175
-    var calorieGoal: Double
+    @Binding var calorieGoal: Double
     var calories: Double
     let progress: Double
     var body: some View {

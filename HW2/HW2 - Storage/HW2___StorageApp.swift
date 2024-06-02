@@ -10,19 +10,12 @@ import SwiftUI
 
 @main
 struct HW2___StorageApp: App {
-//    let modelContainer: ModelContainer
-//
-//    init() {
-//        do {
-//            modelContainer = try ModelContainer(for: FoodItem.self, Exercise.self, UserInfo.self)
-//        } catch {
-//            fatalError("Could not initialize ModelContainer")
-//        }
-//    }
+    @StateObject var manager = HealthManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(manager)
         }
         .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self, UserGoals.self])
 //        .modelContainer(modelContainer)

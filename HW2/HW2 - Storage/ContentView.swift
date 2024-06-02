@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 4/21/24.
-//
-
 import SwiftData
 import SwiftUI
 
@@ -109,19 +102,17 @@ struct ContentView: View {
                     Image(systemName: "figure.strengthtraining.traditional")
                     Text("Exercise")
                 }
-//                Plans()
-//                    .tabItem {
-//                        Image(systemName: "pencil.and.list.clipboard")
-//                        Text("Diet Plans")
-//                    }
+
         }
         .sheet(isPresented: $isProfileOpen) {
             NavigationStack {
-                Profiles(isDarkMode: $isDarkMode)
+                Profiles(isDarkMode: $isDarkMode, calorieGoal: $calorieGoal)
                     .toolbar {
                         ToolbarItem {
                             Button(action: {
                                 isProfileOpen = false
+                                // Save the updated calorieGoal to UserDefaults
+                                UserDefaults.standard.set(calorieGoal, forKey: "calorieGoal")
                             }) {
                                 Text("Done")
                             }
@@ -141,8 +132,4 @@ struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
-}
-
-#Preview {
-    ContentView()
 }

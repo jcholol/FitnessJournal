@@ -1,14 +1,8 @@
-//
-//  Profiles.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/7/24.
-//
-
 import SwiftUI
 
 struct Profiles: View {
     @Binding var isDarkMode: Bool
+    @Binding var calorieGoal: Double
 
     var body: some View {
         NavigationView {
@@ -20,7 +14,7 @@ struct Profiles: View {
                 }
 
                 Section(header: Text("Fitness Information")) {
-//                    GoalsNavigationLink()
+                    GoalsNavigationLink(calorieGoal: $calorieGoal)
                 }
             }
             .navigationTitle("Account Settings")
@@ -56,14 +50,18 @@ struct AppAppearanceToggle: View {
     }
 }
 
-//struct GoalsNavigationLink: View {
-//    var body: some View {
-////        NavigationLink(destination: Goals()) {
-////            Settings(iconColor: .red, iconName: "target")
-////            Text("Goals")
-////        }
-//    }
-//}
+struct GoalsNavigationLink: View {
+    @Binding var calorieGoal: Double
+
+    var body: some View {
+        NavigationLink(destination: GoalsView(calorieGoal: $calorieGoal).environmentObject(GoalsViewModel())) {
+            HStack {
+                Settings(iconColor: .red, iconName: "target")
+                Text("Goals")
+            }
+        }
+    }
+}
 
 struct Settings: View {
     let iconColor: Color
@@ -76,4 +74,86 @@ struct Settings: View {
             Image(systemName: iconName).foregroundColor(.white)
         }
     }
+}
+
+extension UserDefaults {
+    func loadGoals() -> Goals? {
+        if let savedGoalsData = data(forKey: "goals"),
+           let savedGoals = try? JSONDecoder().decode(Goals.self, from: savedGoalsData) {
+            return savedGoals
+        }
+        return nil
+    }
+}
+
+struct GoalsView: View {
+    @EnvironmentObject var viewModel: GoalsViewModel
+    @Environment(\.dismiss) private var dismiss
+    @Binding var calorieGoal: Double
+    @State private var stepGoal: String = ""
+
+    var body: some View {
+        VStack {
+            Form {
+                Section(header: Text("Set Goals")) {
+                    TextField("Calorie Goal", value: $calorieGoal, format: .number)
+                        .keyboardType(.numberPad)
+                    TextField("Step Goal", text: $stepGoal)
+                        .keyboardType(.numberPad)
+                    Button(action: {
+                        if let stepGoalValue = Double(stepGoal) {
+                            viewModel.setGoals(calorieGoal: calorieGoal, stepGoal: stepGoalValue)
+                            stepGoal = ""
+                            dismiss()
+                        }
+                    }) {
+                        Text("Save Goals")
+                    }
+                }
+            }
+        }
+        .onAppear {
+            calorieGoal = viewModel.goals.calorieGoal
+            stepGoal = String(viewModel.goals.stepGoal)
+        }
+        .navigationTitle("Goals")
+    }
+}
+
+class GoalsViewModel: ObservableObject {
+    @Published var goals: Goals
+
+    init() {
+        // Initialize with default values
+        self.goals = Goals(calorieGoal: 2000, stepGoal: 10000)
+        // Update goals with values from UserDefaults
+        if let savedGoals = getGoals() {
+            self.goals = savedGoals
+        }
+    }
+
+    func setGoals(calorieGoal: Double, stepGoal: Double) {
+        goals.calorieGoal = calorieGoal
+        goals.stepGoal = stepGoal
+        saveGoals(goals)
+    }
+
+    private func getGoals() -> Goals? {
+        if let savedGoalsData = UserDefaults.standard.data(forKey: "goals"),
+           let savedGoals = try? JSONDecoder().decode(Goals.self, from: savedGoalsData) {
+            return savedGoals
+        }
+        return nil
+    }
+
+    private func saveGoals(_ goals: Goals) {
+        if let encoded = try? JSONEncoder().encode(goals) {
+            UserDefaults.standard.set(encoded, forKey: "goals")
+        }
+    }
+}
+
+struct Goals: Codable {
+    var calorieGoal: Double
+    var stepGoal: Double
 }
