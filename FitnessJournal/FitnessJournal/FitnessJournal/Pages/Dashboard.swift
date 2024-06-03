@@ -27,7 +27,6 @@ struct Dashboard: View {
         VStack {
             HStack {
                 let caloriesConsumed = filterFoodItem.map { $0.calories }.reduce(0, +)
-                let caloriesBurned = 100 /* filterExercise.map { $0.calories }.reduce(0, +) */
                 let progress: Double = 1 - (caloriesConsumed / calorieGoal)
                 
                 VStack(alignment: .leading) {

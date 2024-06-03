@@ -52,6 +52,7 @@
 		CDE0275A2C0D19F200252E1F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
 		CDE0275C2C0D1A0100252E1F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		CDE0275E2C0D1AD900252E1F /* FitnessJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessJournal.entitlements; sourceTree = "<group>"; };
+		CDE0275F2C0E797D00252E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		CDE027282C0D170C00252E1F /* FitnessJournal */ = {
 			isa = PBXGroup;
 			children = (
+				CDE0275F2C0E797D00252E1F /* Info.plist */,
 				CDE0275E2C0D1AD900252E1F /* FitnessJournal.entitlements */,
 				CDE027292C0D170C00252E1F /* FitnessJournalApp.swift */,
 				CDE0272B2C0D170C00252E1F /* ContentView.swift */,
@@ -382,6 +384,8 @@
 				DEVELOPMENT_TEAM = 2597L59XWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitnessJournal/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use Face ID to authenticate you.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health information on the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,6 +417,8 @@
 				DEVELOPMENT_TEAM = 2597L59XWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitnessJournal/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use Face ID to authenticate you.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health information on the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
