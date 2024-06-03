@@ -1,10 +1,3 @@
-//
-//  Log.swift
-//  BasicNavigation
-//
-//  Created by Yunho Cho on 4/7/24.
-//
-
 import SwiftData
 import SwiftUI
 
@@ -25,10 +18,18 @@ struct Log: View {
     var body: some View {
         NavigationStack {
             List {
-                foodSection(title: "Breakfast", items: filterFoodItem.filter { isInTimeRange($0.date, start: 8, end: 11) })
-                foodSection(title: "Lunch", items: filterFoodItem.filter { isInTimeRange($0.date, start: 12, end: 15) })
-                foodSection(title: "Dinner", items: filterFoodItem.filter { isInTimeRange($0.date, start: 18, end: 21) })
-                foodSection(title: "Snack", items: filterFoodItem.filter { isInSnackTime($0.date) })
+                if !filterFoodItem.filter({ isInTimeRange($0.date, start: 8, end: 11) }).isEmpty {
+                    foodSection(title: "Breakfast", items: filterFoodItem.filter { isInTimeRange($0.date, start: 8, end: 11) })
+                }
+                if !filterFoodItem.filter({ isInTimeRange($0.date, start: 12, end: 15) }).isEmpty {
+                    foodSection(title: "Lunch", items: filterFoodItem.filter { isInTimeRange($0.date, start: 12, end: 15) })
+                }
+                if !filterFoodItem.filter({ isInTimeRange($0.date, start: 18, end: 21) }).isEmpty {
+                    foodSection(title: "Dinner", items: filterFoodItem.filter { isInTimeRange($0.date, start: 18, end: 21) })
+                }
+                if !filterFoodItem.filter({ isInSnackTime($0.date) }).isEmpty {
+                    foodSection(title: "Snack", items: filterFoodItem.filter { isInSnackTime($0.date) })
+                }
             }
             .navigationTitle("Food Journal")
             .navigationBarTitleDisplayMode(.large)

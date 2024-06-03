@@ -60,7 +60,7 @@ struct ContentView: View {
                                 $selectedDate.wrappedValue = newDate
                             }
                             .labelsHidden()
-                            .frame(width: 32, height: 32)
+                            .frame(width: 20, height: 20)
                             .datePickerStyle(.compact)
                             .compositingGroup()
                             .clipped()
@@ -69,10 +69,10 @@ struct ContentView: View {
                         SwiftUIWrapper {
                             Image(systemName: "calendar")
                                 .resizable()
-                                .frame(width: 32, height: 32, alignment: .topLeading)
+                                .frame(width: 20, height: 20, alignment: .topLeading)
                                 .scaledToFit()
                         }
-                        .frame(width: 32, height: 32)
+                        .frame(width: 20, height: 20)
                         .allowsHitTesting(false)
                     }
                     .ignoresSafeArea()
