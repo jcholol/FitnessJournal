@@ -1,15 +1,15 @@
 //
-//  HelloWorldApp.swift
-//  HelloWorld
+//  FitnessJournalApp.swift
+//  FitnessJournal
 //
-//  Created by Yunho Cho on 4/4/24.
+//  Created by Yunho Cho on 6/2/24.
 //
 
-import SwiftData
 import SwiftUI
+import SwiftData
 
 @main
-struct HW2___StorageApp: App {
+struct FitnessJournalApp: App {
     @StateObject var manager = HealthManager()
 
     var body: some Scene {
@@ -18,6 +18,5 @@ struct HW2___StorageApp: App {
                 .environmentObject(manager)
         }
         .modelContainer(for: [FoodItem.self, Exercise.self, UserInfo.self])
-//        .modelContainer(modelContainer)
     }
 }

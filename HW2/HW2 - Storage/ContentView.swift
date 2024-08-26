@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HW2 - Storage
-//
-//  Created by Yunho Cho on 4/21/24.
-//
-
 import SwiftData
 import SwiftUI
 
@@ -20,6 +13,9 @@ struct ContentView: View {
 
     // Load and save calorieGoal using UserDefaults
     @State private var calorieGoal: Double = UserDefaults.standard.double(forKey: "calorieGoal") == 0 ? 2000 : UserDefaults.standard.double(forKey: "calorieGoal")
+
+    // Load and save stepGoal using UserDefaults
+    @State private var stepGoal: Double = UserDefaults.standard.double(forKey: "stepGoal") == 0 ? 10000 : UserDefaults.standard.double(forKey: "stepGoal")
 
     var dateFormatter: DateFormatter {
         let dateFormat = DateFormatter()
@@ -94,7 +90,7 @@ struct ContentView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         TabView {
-            Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal)
+            Dashboard(selectedDate: $selectedDate, calorieGoal: $calorieGoal, stepGoal: $stepGoal)
                 .tabItem {
                     Image(systemName: "square.grid.3x3.middle.fill")
                     Text("Dashboard")
@@ -109,19 +105,18 @@ struct ContentView: View {
                     Image(systemName: "figure.strengthtraining.traditional")
                     Text("Exercise")
                 }
-//                Plans()
-//                    .tabItem {
-//                        Image(systemName: "pencil.and.list.clipboard")
-//                        Text("Diet Plans")
-//                    }
+
         }
         .sheet(isPresented: $isProfileOpen) {
             NavigationStack {
-                Profiles(isDarkMode: $isDarkMode)
+                Profiles(isDarkMode: $isDarkMode, calorieGoal: $calorieGoal, stepGoal: $stepGoal)
                     .toolbar {
                         ToolbarItem {
                             Button(action: {
                                 isProfileOpen = false
+                                // Save the updated goals to UserDefaults
+                                UserDefaults.standard.set(calorieGoal, forKey: "calorieGoal")
+                                UserDefaults.standard.set(stepGoal, forKey: "stepGoal")
                             }) {
                                 Text("Done")
                             }
@@ -141,8 +136,4 @@ struct SwiftUIWrapper<T: View>: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIHostingController<T>, context: Context) {}
-}
-
-#Preview {
-    ContentView()
 }

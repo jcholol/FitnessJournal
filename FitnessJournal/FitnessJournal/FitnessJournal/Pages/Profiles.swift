@@ -32,8 +32,8 @@ struct ProfileHeader: View {
                 .frame(width: 50, height: 50)
                 .foregroundColor(.blue)
             VStack(alignment: .leading) {
-                Text("User").font(.title2)
-                Text("User Email")
+                Text("Local User").font(.title2)
+                //Text("User Email")
             }
         }
     }
@@ -98,15 +98,29 @@ struct GoalsView: View {
         VStack {
             Form {
                 Section(header: Text("Set Goals")) {
-                    TextField("Calorie Goal", value: $calorieGoal, format: .number)
-                        .keyboardType(.numberPad)
-                    TextField("Step Goal", value: $stepGoal, format: .number)
-                        .keyboardType(.numberPad)
-                    Button(action: {
-                        viewModel.setGoals(calorieGoal: calorieGoal, stepGoal: stepGoal)
-                        dismiss()
-                    }) {
-                        Text("Save Goals")
+                    HStack {
+                        Text("Daily Calorie Goal")
+                        Spacer()
+                        TextField("Calorie Goal", value: $calorieGoal, format: .number)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    HStack {
+                        Text("Daily Step Goal")
+                        Spacer()
+                        TextField("Step Goal", value: $stepGoal, format: .number)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            viewModel.setGoals(calorieGoal: calorieGoal, stepGoal: stepGoal)
+                            dismiss()
+                        }) {
+                            Text("Save Goals")
+                        }
                     }
                 }
             }

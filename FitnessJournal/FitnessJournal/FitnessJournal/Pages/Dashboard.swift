@@ -27,12 +27,11 @@ struct Dashboard: View {
         VStack {
             HStack {
                 let caloriesConsumed = filterFoodItem.map { $0.calories }.reduce(0, +)
-                let caloriesBurned = 100 /* filterExercise.map { $0.calories }.reduce(0, +) */
                 let progress: Double = 1 - (caloriesConsumed / calorieGoal)
                 
                 VStack(alignment: .leading) {
                     GroupBox {
-                        Text("Remaining = Goal - Food + Exercise")
+                        Text("Remaining = Goal - Food")
                             .font(.subheadline)
                             .bold()
                         GroupBox {
@@ -48,9 +47,9 @@ struct Dashboard: View {
                                         let fuel = Image(systemName: "takeoutbag.and.cup.and.straw")
                                         Text("\(fuel) \(caloriesConsumed, specifier: "%.0f")")
                                             .font(.title2)
-                                        let burn = Image(systemName: "figure.cooldown")
-                                        Text("\(burn) \(caloriesBurned, specifier: "%.0f")")
-                                            .font(.title2)
+//                                        let burn = Image(systemName: "figure.cooldown")
+//                                        Text("\(burn) \(caloriesBurned, specifier: "%.0f")")
+//                                            .font(.title2)
                                     }
                                     .padding()
                                     .frame(width: 100)

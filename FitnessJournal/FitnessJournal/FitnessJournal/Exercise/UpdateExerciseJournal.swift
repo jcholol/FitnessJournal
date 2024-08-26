@@ -1,26 +1,24 @@
 //
-//  UpdateJournalEntry.swift
+//  UpdateExerciseJournal.swift
 //  HW2 - Storage
 //
-//  Created by Yunho Cho on 4/21/24.
+//  Created by Yunho Cho on 4/27/24.
 //
 
-import SwiftData
 import SwiftUI
 
-struct UpdateJournalEntry: View {
+struct UpdateExerciseJournal: View {
     @Environment(\.dismiss) private var dismiss
-    @Bindable var food: FoodItem
+    @Bindable var exercise: Exercise
 
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name of Food", text: $food.name)
-                TextField("Amount of calories", value: $food.calories, format: .number)
+                TextField("Name of Activity", text: $exercise.name)
+                TextField("Amount of calories", value: $exercise.duration, format: .number)
                     .keyboardType(.numberPad)
-                DatePicker("Date", selection: $food.date, displayedComponents: .hourAndMinute)
             }
-            .navigationTitle("Update Food")
+            .navigationTitle("Update Activity")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {

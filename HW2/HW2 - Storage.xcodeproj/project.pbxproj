@@ -27,12 +27,13 @@
 		CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */; };
 		CD0488352BDDFA7D00FCEA42 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */; };
 		CDE0113E2BE3439E00252E1F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0113D2BE3439E00252E1F /* UserInfo.swift */; };
-		CDE018262BF1AD7000252E1F /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018252BF1AD7000252E1F /* Goals.swift */; };
 		CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE018272BF1B17900252E1F /* UserGoals.swift */; };
+		CDE027162C0C1EF800252E1F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027152C0C1EF800252E1F /* HealthCard.swift */; };
+		CDE027182C0C219900252E1F /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE027172C0C219900252E1F /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD0487D12BD504C600FCEA42 /* HW2 - Storage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW2 - Storage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0487D12BD504C600FCEA42 /* FitnessJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0487D42BD504C600FCEA42 /* HW2___StorageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HW2___StorageApp.swift"; sourceTree = "<group>"; };
 		CD0487D62BD504C600FCEA42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD0487D82BD504C600FCEA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,9 +54,10 @@
 		CD0488302BDDC16100FCEA42 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
 		CD0488342BDDFA7D00FCEA42 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 		CDE0113D2BE3439E00252E1F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		CDE018252BF1AD7000252E1F /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		CDE018272BF1B17900252E1F /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
 		CDE027142C0C1BF000252E1F /* HW2 - Storage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HW2 - Storage.entitlements"; sourceTree = "<group>"; };
+		CDE027152C0C1EF800252E1F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
+		CDE027172C0C219900252E1F /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 		CD0487D22BD504C600FCEA42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD0487D12BD504C600FCEA42 /* HW2 - Storage.app */,
+				CD0487D12BD504C600FCEA42 /* FitnessJournal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,11 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				CD0487F42BD5060E00FCEA42 /* Dashboard.swift */,
+				CDE027172C0C219900252E1F /* HealthManager.swift */,
 				CD0487F22BD505FA00FCEA42 /* Log.swift */,
 				CD0487F82BD5062800FCEA42 /* Plans.swift */,
 				CD0487FA2BD5063400FCEA42 /* Profiles.swift */,
 				CD0488252BDDBF9D00FCEA42 /* ExerciseLog.swift */,
-				CDE018252BF1AD7000252E1F /* Goals.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0487F02BD505E000FCEA42 /* Calories.swift */,
+				CDE027152C0C1EF800252E1F /* HealthCard.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 			packageProductDependencies = (
 			);
 			productName = "HW2 - Storage";
-			productReference = CD0487D12BD504C600FCEA42 /* HW2 - Storage.app */;
+			productReference = CD0487D12BD504C600FCEA42 /* FitnessJournal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -238,10 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0487F32BD505FA00FCEA42 /* Log.swift in Sources */,
-				CDE018262BF1AD7000252E1F /* Goals.swift in Sources */,
 				CD0488312BDDC16100FCEA42 /* ExerciseRow.swift in Sources */,
 				CDE018282BF1B17900252E1F /* UserGoals.swift in Sources */,
 				CD0488292BDDC11600FCEA42 /* Exercise.swift in Sources */,
+				CDE027162C0C1EF800252E1F /* HealthCard.swift in Sources */,
 				CD0487D72BD504C600FCEA42 /* ContentView.swift in Sources */,
 				CD0487D52BD504C600FCEA42 /* HW2___StorageApp.swift in Sources */,
 				CD0487F92BD5062800FCEA42 /* Plans.swift in Sources */,
@@ -251,6 +254,7 @@
 				CD04882B2BDDC14000FCEA42 /* UpdateExerciseJournal.swift in Sources */,
 				CD0488142BD5DA7400FCEA42 /* JournalEntry.swift in Sources */,
 				CD0487FB2BD5063400FCEA42 /* Profiles.swift in Sources */,
+				CDE027182C0C219900252E1F /* HealthManager.swift in Sources */,
 				CD0488202BDCB53900FCEA42 /* FoodItem.swift in Sources */,
 				CD0488162BD5E5B900FCEA42 /* UpdateJournalEntry.swift in Sources */,
 				CD0487F52BD5060E00FCEA42 /* Dashboard.swift in Sources */,
@@ -394,6 +398,7 @@
 				DEVELOPMENT_TEAM = 2597L59XWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health steps on the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -405,7 +410,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jcholol.HW2---Storage";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FitnessJournal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,6 +429,7 @@
 				DEVELOPMENT_TEAM = 2597L59XWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow to integrate Apple Health steps on the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,7 +441,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jcholol.HW2---Storage";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FitnessJournal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
